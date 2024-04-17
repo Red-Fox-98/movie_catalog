@@ -1,0 +1,9 @@
+{
+  "name": "movie_catalog",
+  "version": "1.0.0",
+  "description": "Movie catalog test task",
+  "main": "index.js",
+  "repository": "https://github.com/Red-Fox-98/movie_catalog.git",
+  "author": "Evgenia Zaitseva",
+  "license": "MIT"
+}
