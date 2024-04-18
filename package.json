@@ -10,7 +10,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --fix",
+    "lint:check": "next lint",
+    "prettier": "prettier --write .",
+    "types": "tsc --noEmit",
+    "check": "yarn run types && yarn run lint && yarn run prettier"
   },
   "dependencies": {
     "i18next": "^23.11.2",
@@ -23,7 +27,8 @@
     "@eslint/js": "^9.0.0",
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
-    "eslint": "^9.0.0",
+    "eslint": "<9.0.0",
+    "eslint-config-next": "^14.2.2",
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
     "typescript": "^5.4.5",
