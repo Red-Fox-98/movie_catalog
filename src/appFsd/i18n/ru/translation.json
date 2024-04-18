@@ -1,0 +1,16 @@
+{
+  "lang": "ru",
+  "test": "Сила Сибири",
+  "film": {
+    "statusesList": {
+      "announcement": "анонс",
+      "ongoing": "онгоинг",
+      "release": "вышло"
+    },
+
+    "contributor": {
+      "author": "Автор",
+      "externalSource": "Источник"
+    }
+  }
+}
