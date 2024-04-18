@@ -1,7 +1,8 @@
 /** @type {import("prettier").Config} */
 const config = {
   useTabs: false,
-  singleQuote: true
+  jsxSingleQuote: true,
+  singleQuote: true,
 };
 
 export default config;
