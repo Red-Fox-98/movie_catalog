@@ -1,16 +1,55 @@
-.header{
+.header {
   height: 92px;
   display: flex;
   padding: 9px 32px;
   gap: 16px;
   align-items: center;
-  background: #09090C;
+  background: #09090c;
 }
 
-.logo{
+.logo {
   width: 144px;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
+.searchForm {
+  position: relative;
+  width: 379px;
+  height: 68px;
+  padding: 0 16px 0 38px;
+}
+
+.input {
+  display: block;
+  width: 87%;
+  height: 68px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.input:active,
+.input:hover,
+.input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 87%;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background-image: url('./headerImages/Vector.svg');
+  background-size: cover;
+  background-color: #000000;
+}

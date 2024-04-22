@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import Styles from './MainTemplate.module.scss'
+import Styles from './MainTemplate.module.scss';
 import Header from '../Header/Header';
 
 interface MainTemplateProps {
@@ -10,9 +10,7 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   return (
     <div className={Styles.mainTemplate}>
       <Header />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 };
