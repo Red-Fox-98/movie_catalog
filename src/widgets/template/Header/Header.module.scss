@@ -1,0 +1,131 @@
+.header {
+  height: 92px;
+  display: flex;
+  padding: 9px 32px;
+  gap: 16px;
+  align-items: center;
+  background: #09090c;
+}
+
+.logo {
+  width: 144px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.searchForm {
+  position: relative;
+  width: 379px;
+  height: 68px;
+  padding: 0 16px 0 38px;
+}
+
+.input {
+  display: block;
+  width: 87%;
+  height: 68px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.input:active,
+.input:hover,
+.input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.buttonSearch {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 87%;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background-image: url('./headerImages/Vector.svg');
+  background-size: cover;
+  background-color: #000000;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  button {
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.buyButton {
+  height: 44px;
+  width: 129px;
+  padding: 10px 16px 10px 16px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  opacity: 1;
+  transition: opacity 0.15s linear;
+
+  color: #ffffff;
+  font-family:
+    TT Norms Pro,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.48px;
+  text-align: center;
+}
+
+.buyButton:hover {
+  opacity: 0.95;
+}
+
+.promocodeButton {
+  height: 44px;
+  width: 110px;
+  padding: 10px 16px 10px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background 0.15s linear;
+
+  color: #ffffff;
+  font-family:
+    TT Norms Pro,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.48px;
+  text-align: center;
+}
+
+.promocodeButton:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.authButton {
+  width: 70px;
+  height: 31px;
+  background: none;
+
+  font-family:
+    TT Norms Pro,
+    sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30.72px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+
+  color: rgba(186, 186, 186, 1);
+  transition: color 0.15s linear;
+}
+
+.authButton:hover {
+  color: #ffffff;
+}

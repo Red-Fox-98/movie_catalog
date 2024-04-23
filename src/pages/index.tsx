@@ -1,8 +1,12 @@
 import type { NextPage } from 'next';
-import HomePage from '../pagesFsd/home/Home';
+import MainTemplate from '../widgets/template/MainTemplate/MainTemplate';
 
 const Home: NextPage = () => {
-  return <HomePage />;
+  return (
+    <MainTemplate>
+      <div>content</div>
+    </MainTemplate>
+  );
 };
 
 export default Home;
