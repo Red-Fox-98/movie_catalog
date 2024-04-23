@@ -1,0 +1,80 @@
+.footer {
+  height: 429px;
+  padding: 52px 32px 144px;
+  background-color: rgba(9, 9, 12, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.socialMediaForm {
+  width: 896px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.supportButton {
+  width: 202px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  padding: 10px 16px 10px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  font-family:
+    TT Norms Pro,
+    serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.17px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.socialNetworks {
+  height: 32px;
+  display: flex;
+  gap: 24px;
+  text-align: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    color: rgba(186, 186, 186, 1);
+    font-family:
+      TT Norms Pro,
+      serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.17px;
+    text-align: left;
+    text-decoration: none;
+
+    transition: color 0.3s linear;
+  }
+
+  a:hover {
+    color: #6a11cb;
+
+    svg {
+      fill: #6a11cb;
+      fill-opacity: 1;
+    }
+  }
+}
+
+.socialIcon {
+  height: 24px;
+  width: 24px;
+  svg {
+    fill: white;
+    fill-opacity: 0.5;
+    transition:
+      fill 0.3s linear,
+      fill-opacity 0.3s linear;
+  }
+}
