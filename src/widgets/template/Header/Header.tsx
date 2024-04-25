@@ -19,7 +19,7 @@ const Header: FC = () => {
       </div>
       <div className={Styles.headerRight}>
         <button className={Styles.buyButton}>7 дней за 0 ₽</button>
-        <button className={Styles.promocodeButton}>Промокод</button>
+        <button className={Styles.promoCodeButton}>Промокод</button>
         <button className={Styles.authButton}>Войти</button>
       </div>
     </div>
