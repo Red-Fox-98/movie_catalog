@@ -1,19 +1,21 @@
 import { FC } from 'react';
 import Styles from './Header.module.scss';
-import Image from 'next/image';
-import logo from './headerImages/Logo.svg';
-import name from './headerImages/Name.svg';
+import Logo from '../../../shared/uikit/icons/Logo';
+import Name from '../../../shared/uikit/icons/Name';
+import Search from '../../../shared/uikit/icons/Search';
 
 const Header: FC = () => {
   return (
     <div className={Styles.header}>
       <div className={Styles.logo}>
-        <Image src={logo} alt={'logo'} priority={true} />
-        <Image src={name} alt={'name'} priority={true} />
+        <Logo />
+        <Name />
       </div>
       <div className={Styles.searchForm}>
         <input className={Styles.input} />
-        <button className={Styles.searchButton} />
+        <button className={Styles.searchButton}>
+          <Search />
+        </button>
       </div>
       <div className={Styles.headerRight}>
         <button className={Styles.buyButton}>7 дней за 0 ₽</button>

@@ -1,0 +1,52 @@
+.tabButton {
+  position: relative;
+  width: 81px;
+  height: 70px;
+  padding: 4px 0 6px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: 0;
+}
+
+.activeTabButton {
+  content: '';
+  height: 53px;
+  width: 53px;
+  border-radius: 200px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  opacity: 0.6999999881;
+  filter: blur(14px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    fill: rgba(255, 255, 255, 1);
+  }
+}
+
+.name {
+  z-index: 1;
+  font-family:
+    TT Norms Pro,
+    sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12.8px;
+  text-align: left;
+  color: rgba(186, 186, 186, 1);
+}

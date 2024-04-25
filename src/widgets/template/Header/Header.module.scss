@@ -4,7 +4,6 @@
   padding: 9px 32px;
   gap: 16px;
   align-items: center;
-  background: #09090c;
 }
 
 .logo {
@@ -12,6 +11,10 @@
   display: flex;
   align-items: center;
   gap: 16px;
+
+  svg {
+    fill: rgba(255, 255, 255, 1);
+  }
 }
 
 .searchForm {
@@ -45,11 +48,11 @@
   height: 32px;
   top: 50%;
   left: 87%;
+  cursor: pointer;
 
   transform: translateY(-50%);
 
   border: none;
-  background-image: url('headerImages/Search.svg');
   background-size: cover;
   background-color: transparent;
 }
@@ -71,21 +74,15 @@
   width: 129px;
   padding: 10px 16px 10px 16px;
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-  opacity: 1;
-  transition: opacity 0.15s linear;
 
   font-family:
     TT Norms Pro,
-    serif;
+    sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20.48px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
-}
-
-.buyButton:hover {
-  opacity: 0.95;
 }
 
 .promocodeButton {
@@ -93,11 +90,10 @@
   width: 110px;
   padding: 10px 16px 10px 16px;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background 0.15s linear;
 
   font-family:
     TT Norms Pro,
-    serif;
+    sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20.48px;
@@ -105,27 +101,18 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.promocodeButton:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
 .authButton {
   width: 70px;
   height: 31px;
   background: none;
-  transition: color 0.15s linear;
 
   font-family:
     TT Norms Pro,
-    serif;
+    sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 30.72px;
   letter-spacing: 0.10000000149011612px;
   text-align: left;
   color: rgba(186, 186, 186, 1);
-}
-
-.authButton:hover {
-  color: #ffffff;
 }
