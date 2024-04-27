@@ -1,12 +1,9 @@
-export interface MovieImages{
+export interface MovieInfo {
   preview: string;
-  logo?:string;
-}
-
-export interface MovieTags{
+  logo: string;
   rate: number;
-  year?: number;
-  genre?: string;
-  country?: string;
+  year: number;
+  genre: string;
+  country: string;
   ageRating?: string;
 }
