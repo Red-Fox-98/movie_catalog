@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Style from './Button.module.scss';
 
 type ButtonContentType = string | ReactNode;
-type ButtonVariantType = "primary" | "secondary";
+type ButtonVariantType = 'primary' | 'secondary';
 
 interface ButtonProps {
   name: ButtonContentType;

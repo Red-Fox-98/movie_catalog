@@ -29,9 +29,9 @@ const TrailerSection: FC<TrailerSectionProps> = ({ movieInfo }) => {
         <div className={Style.buttonsBlock}>
           <Button variant={'primary'} name={'Подробнее'} width={260} height={52} font_size={18} />
           <div className={Style.buttonsGroup}>
-            <Button name={<Marker />} variant={"secondary"} width={64} height={52} />
-            <Button name={<Heart />} variant={"secondary"} width={64} height={52} />
-            <Button name={<Share />} variant={"secondary"} width={64} height={52} />
+            <Button name={<Marker />} variant={'secondary'} width={64} height={52} />
+            <Button name={<Heart />} variant={'secondary'} width={64} height={52} />
+            <Button name={<Share />} variant={'secondary'} width={64} height={52} />
           </div>
         </div>
       </div>
