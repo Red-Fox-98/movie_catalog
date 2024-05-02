@@ -9,12 +9,10 @@ interface MainTemplateProps {
 
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   return (
-    <div className={Styles.body}>
-      <div className={Styles.mainTemplate}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </div>
+    <div className={Styles.mainTemplate}>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </div>
   );
 };

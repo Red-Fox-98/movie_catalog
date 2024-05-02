@@ -3,6 +3,7 @@
   width: 81px;
   height: 70px;
   padding: 4px 0 6px 0;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
@@ -41,9 +42,6 @@
 
 .name {
   z-index: 1;
-  font-family:
-    TT Norms Pro,
-    sans-serif;
   font-size: 10px;
   font-weight: 500;
   line-height: 12.8px;
