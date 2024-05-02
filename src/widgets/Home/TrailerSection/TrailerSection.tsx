@@ -7,6 +7,7 @@ import { MovieInfo } from '../../../shared/api/home/type';
 import Marker from '../../../shared/uikit/icons/Marker';
 import Heart from '../../../shared/uikit/icons/Heart';
 import Share from '../../../shared/uikit/icons/Share';
+import Button from '../../../shared/uikit/Button/Button';
 
 interface TrailerSectionProps {
   movieInfo: MovieInfo;
@@ -26,17 +27,11 @@ const TrailerSection: FC<TrailerSectionProps> = ({ movieInfo }) => {
           <div className={Style.tag}>{movieInfo['ageRating']}</div>
         </div>
         <div className={Style.buttonsBlock}>
-          <button className={Style.buttonDesktop}>Подробнее</button>
+          <Button variant={'primary'} name={'Подробнее'} width={260} height={52} font_size={18} />
           <div className={Style.buttonsGroup}>
-            <button>
-              <Marker />
-            </button>
-            <button>
-              <Heart />
-            </button>
-            <button>
-              <Share />
-            </button>
+            <Button name={<Marker />} variant={"secondary"} width={64} height={52} />
+            <Button name={<Heart />} variant={"secondary"} width={64} height={52} />
+            <Button name={<Share />} variant={"secondary"} width={64} height={52} />
           </div>
         </div>
       </div>

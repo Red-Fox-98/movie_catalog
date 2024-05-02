@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Style from './HomePage.module.scss';
-import TrailerSection from '../../entities/Home/TrailerSection/TrailerSection';
+import TrailerSection from '../../widgets/Home/TrailerSection/TrailerSection';
 
 import { MovieInfoMock } from '../../shared/api/home/mock';
 
