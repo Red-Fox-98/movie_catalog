@@ -8,6 +8,7 @@ import Marker from '../../../shared/uikit/icons/Marker';
 import Heart from '../../../shared/uikit/icons/Heart';
 import Share from '../../../shared/uikit/icons/Share';
 import Button from '../../../shared/uikit/Button/Button';
+import Tags from '../../../entities/Home/Tags/Tags';
 
 interface TrailerSectionProps {
   movieInfo: MovieInfo;
@@ -16,16 +17,17 @@ interface TrailerSectionProps {
 const TrailerSection: FC<TrailerSectionProps> = ({ movieInfo }) => {
   return (
     <div className={Style.trailerSection}>
-      <Image src={movieInfo['preview']} alt={'preview'} width={960} height={574} />
+      <Image
+        className={Style.preview}
+        src={movieInfo['preview']}
+        alt={'preview'}
+        width={1231}
+        height={692}
+        priority
+      />
       <div className={Style.info}>
         <Image src={movieInfo['logo']} alt={'logo'} width={338} height={101} />
-        <div className={Style.tags}>
-          <div className={Style.rating}>{movieInfo['rate']}</div>
-          <div className={Style.tag}>{movieInfo['year']}</div>
-          <div className={Style.tag}>{movieInfo['genre']}</div>
-          <div className={Style.tag}>{movieInfo['country']}</div>
-          <div className={Style.tag}>{movieInfo['ageRating']}</div>
-        </div>
+        <Tags movieInfo={movieInfo} />
         <div className={Style.buttonsBlock}>
           <Button variant={'primary'} name={'Подробнее'} width={260} height={52} font_size={18} />
           <div className={Style.buttonsGroup}>
