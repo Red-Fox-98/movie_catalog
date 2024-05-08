@@ -1,16 +1,9 @@
 {
   "lang": "en",
-  "test": "Power of Siberia",
-  "film": {
-    "statusesList": {
-      "announcement": "announcement",
-      "ongoing": "ongoing",
-      "release": "release"
-    },
-
-    "contributor": {
-      "author": "Author",
-      "externalSource": "Source"
+  "homePage": {
+    "movieStatus": {
+      "premiere": "Premiere",
+      "newSeason": "New season"
     }
   }
 }

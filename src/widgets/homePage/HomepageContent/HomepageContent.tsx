@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Styles from './HomepageContent.module.scss';
-import NewMovies from '../../../features/Home/NewMovies/NewMovies';
+import NewMovies from '../../../features/homePage/NewMovies/NewMovies';
 
 import { NewMoviesInfoMock } from '../../../shared/api/home/mock';
 
