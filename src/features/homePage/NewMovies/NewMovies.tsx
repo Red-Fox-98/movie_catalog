@@ -32,7 +32,7 @@ const NewMovies: FC<NewMoviesProps> = ({ movieInfo }) => {
             {typeof movie.status !== 'undefined' && <MovieStatusLabel status={movie.status} />}
           </div>
           <div className={Styles.info}>
-            <div className={Styles.title}>{movie.name}</div>
+            <div className={Styles.name}>{movie.name}</div>
             <div
               className={Styles.time}
             >{`${movie.year}, ${movie.numberOfHours} часа ${movie.numberOfMinutes} минут`}</div>
