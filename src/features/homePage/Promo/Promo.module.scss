@@ -7,6 +7,7 @@
     0px 1.03px 18.58px 0px rgba(255, 255, 255, 0.05) inset,
     -1.03px 0px 12px 0px rgba(255, 255, 255, 0.2) inset,
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .title {
@@ -32,4 +33,23 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 20.48px;
+}
+
+.image {
+  position: absolute;
+  width: 263.75px;
+  height: 394.88px;
+
+  top: 25px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-17.31deg);
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 1027px;
+    height: auto;
+    transform: translate(-66%, -50%);
+  }
 }
