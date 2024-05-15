@@ -1,1 +1,1 @@
-export type MovieStatus = 'premiere' | 'newSeason';
+export type MovieStatus = "premiere" | "newSeason";

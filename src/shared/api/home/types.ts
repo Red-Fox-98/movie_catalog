@@ -1,9 +1,9 @@
-import { MovieStatus } from '../../../entities/homePage/MovieStatusLabel/types';
+import { MovieStatus } from "src/entities/homePage/MovieStatusLabel/types";
 
 export interface MovieInfo {
   preview: string;
   logo: string;
-  rating: number;
+  rating: string;
   year: number;
   genre: string;
   country: string;
@@ -13,7 +13,7 @@ export interface MovieInfo {
 export interface NewMovieInfo {
   id: number;
   preview: string;
-  rating: number;
+  rating: string;
   status?: MovieStatus;
   name: string;
   year: number;

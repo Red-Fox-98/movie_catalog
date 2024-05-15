@@ -1,0 +1,48 @@
+.catalog_additional_tags_grid {
+  position: absolute;
+  width: 510px;
+  height: 60px;
+  top: 140px;
+  left: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.catalog_additional_tags_left {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalog_additional_tags_right {
+  width: 302px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.additional_tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    fill: #6a11cb;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.17px;
+}

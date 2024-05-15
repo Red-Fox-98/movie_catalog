@@ -1,22 +1,12 @@
 .primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
-  border-radius: 16px;
   cursor: pointer;
 
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-  font-weight: 500;
-  text-align: center;
 }
 
 .secondary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
-  border-radius: 16px;
   cursor: pointer;
 
   background: linear-gradient(
@@ -29,4 +19,29 @@
   svg {
     fill: rgba(186, 186, 186, 1);
   }
+}
+
+.large {
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+.medium {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.small {
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.wide {
+  width: 100%;
 }

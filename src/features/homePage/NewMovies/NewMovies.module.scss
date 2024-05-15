@@ -1,3 +1,21 @@
+.listNewMovies {
+  position: relative;
+  height: 447px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  width: 100px;
+  height: 31px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.72px;
+  text-align: left;
+}
+
 .contentNewMovies {
   position: absolute;
   height: 386px;

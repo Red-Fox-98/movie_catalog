@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react';
-import Styles from './MainTemplate.module.scss';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import { FC, ReactNode } from "react";
+import Styles from "./MainTemplate.module.scss";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 interface MainTemplateProps {
   children?: ReactNode;

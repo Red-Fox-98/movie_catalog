@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { MovieStatus } from './types';
-import { useTranslation } from 'react-i18next';
-import Styles from './MovieStatusLabel.module.scss';
+import { FC } from "react";
+import { MovieStatus } from "./types";
+import { useTranslation } from "react-i18next";
+import Styles from "./MovieStatusLabel.module.scss";
 
 interface MovieStatusLabelProps {
   status: MovieStatus;
