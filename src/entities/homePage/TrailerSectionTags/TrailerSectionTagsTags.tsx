@@ -1,12 +1,12 @@
 import { FC } from "react";
-import Styles from "./Tags.module.scss";
-import { MovieInfo } from "../../../shared/api/home/types";
+import Styles from "./TrailerSectionTags.module.scss";
+import { MovieInfo } from "src/shared/api/home/types";
 
 interface TagsProps {
   movieInfo: MovieInfo;
 }
 
-const Tags: FC<TagsProps> = ({ movieInfo }) => {
+const TrailerSectionTagsTags: FC<TagsProps> = ({ movieInfo }) => {
   return (
     <div className={Styles.tags}>
       <div className={Styles.rating}>{movieInfo["rating"]}</div>
@@ -18,4 +18,4 @@ const Tags: FC<TagsProps> = ({ movieInfo }) => {
   );
 };
 
-export default Tags;
+export default TrailerSectionTagsTags;

@@ -8,7 +8,7 @@ import Marker from "../../../shared/uikit/icons/Marker";
 import Heart from "../../../shared/uikit/icons/Heart";
 import Share from "../../../shared/uikit/icons/Share";
 import Button from "../../../shared/uikit/Button/Button";
-import Tags from "../../../entities/homePage/Tags/Tags";
+import TrailerSectionTagsTags from "src/entities/homePage/TrailerSectionTags/TrailerSectionTagsTags";
 
 interface TrailerSectionProps {
   movieInfo: MovieInfo;
@@ -27,7 +27,7 @@ const TrailerSection: FC<TrailerSectionProps> = ({ movieInfo }) => {
       />
       <div className={Styles.info}>
         <Image src={movieInfo["logo"]} alt={"logo"} width={338} height={101} />
-        <Tags movieInfo={movieInfo} />
+        <TrailerSectionTagsTags movieInfo={movieInfo} />
         <div className={Styles.buttonsBlock}>
           <Button value={"Подробнее"} variant={"primary"} size={"l"} isWide={true} />
           <div className={Styles.softkeyGroup}>
