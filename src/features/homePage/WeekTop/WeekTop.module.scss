@@ -34,6 +34,10 @@
   align-items: center;
 }
 
+.movie:last-child {
+  min-width: 453px;
+}
+
 .peviewMovie {
   position: absolute;
   top: 0;

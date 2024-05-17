@@ -1,7 +1,14 @@
+import { ReactNode } from "react";
 import One from "src/shared/uikit/numbers/One";
 import Two from "src/shared/uikit/numbers/Two";
 import Three from "src/shared/uikit/numbers/Three";
-import { ReactNode } from "react";
+import Four from "src/shared/uikit/numbers/Four";
+import Five from "src/shared/uikit/numbers/Five";
+import Six from "src/shared/uikit/numbers/Six";
+import Seven from "src/shared/uikit/numbers/Seven";
+import Eight from "src/shared/uikit/numbers/Eight";
+import Nine from "src/shared/uikit/numbers/Nine";
+import Ten from "src/shared/uikit/numbers/Ten";
 
 interface INumber {
   number: ReactNode;
@@ -19,25 +26,25 @@ export const getTheNumbers = () => {
       number: <Three />
     },
     {
-      number: <One />
+      number: <Four />
     },
     {
-      number: <Two />
+      number: <Five />
     },
     {
-      number: <Three />
+      number: <Six />
     },
     {
-      number: <One />
+      number: <Seven />
     },
     {
-      number: <Two />
+      number: <Eight />
     },
     {
-      number: <Three />
+      number: <Nine />
     },
     {
-      number: <One />
+      number: <Ten />
     }
   ];
 

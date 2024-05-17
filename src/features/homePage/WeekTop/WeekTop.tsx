@@ -15,7 +15,7 @@ const WeekTop: FC<WeekTopProps> = ({ movies }) => {
 
   useEffect(() => {
     const movies = typeof document !== "undefined" && document.getElementById("topMovies");
-    console.log(movies);
+
     const onWheel = (event: WheelEvent) => {
       event.preventDefault();
       movies.scrollBy({
@@ -35,7 +35,7 @@ const WeekTop: FC<WeekTopProps> = ({ movies }) => {
           <div key={movie.id} className={Styles.movie}>
             {numbers[movie.id].number}
             <div className={Styles.peviewMovie}>
-              <Image src={movie.preview} alt={"preview"} width={246} height={370} />
+              <Image src={movie.preview} alt={"preview"} width={246} height={370} priority />
             </div>
           </div>
         ))}
