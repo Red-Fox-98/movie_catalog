@@ -1,0 +1,51 @@
+.moviesWeek {
+  position: relative;
+  width: 896px;
+  height: 424px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.title {
+  font-family: $font-drukWideCyr;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.movies {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: -32px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.movie {
+  position: relative;
+  height: 370px;
+  min-width: 333px;
+  display: flex;
+  align-items: center;
+}
+
+.peviewMovie {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 246px;
+  height: 370px;
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

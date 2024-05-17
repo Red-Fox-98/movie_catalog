@@ -20,3 +20,8 @@ export interface NewMovieInfo {
   numberOfHours: number;
   numberOfMinutes: number;
 }
+
+export interface MovieWeek {
+  id: number;
+  preview: string;
+}

@@ -10,7 +10,7 @@ interface NewMoviesProps {
 
 const NewMovies: FC<NewMoviesProps> = ({ movieInfo }) => {
   useEffect(() => {
-    const movies = typeof document !== "undefined" && document.getElementById("movies");
+    const movies = typeof document !== "undefined" && document.getElementById("newMovies");
     const onWheel = (event: WheelEvent) => {
       event.preventDefault();
       movies.scrollBy({
@@ -25,7 +25,7 @@ const NewMovies: FC<NewMoviesProps> = ({ movieInfo }) => {
   return (
     <div className={Styles.listNewMovies}>
       <div className={Styles.title}>Новинки</div>
-      <div className={Styles.contentNewMovies} id={"movies"}>
+      <div className={Styles.contentNewMovies} id={"newMovies"}>
         {movieInfo.map((movie) => (
           <div key={movie.id} className={Styles.movie}>
             <Image src={movie.preview} alt={"preview"} width={216} height={324} priority />
