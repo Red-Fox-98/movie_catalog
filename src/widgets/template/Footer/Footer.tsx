@@ -1,13 +1,13 @@
-import { FC } from 'react';
-import Styles from './Footer.module.scss';
+import { FC } from "react";
+import Styles from "./Footer.module.scss";
 
 /*icons*/
-import YT from '../../../shared/uikit/icons/YT';
-import VK from '../../../shared/uikit/icons/VK';
-import TG from '../../../shared/uikit/icons/TG';
-import Logo from '../../../shared/uikit/icons/Logo';
-import Name from '../../../shared/uikit/icons/Name';
-import TabSwitch from '../../../features/template/TabSwitch/TabSwitch';
+import YT from "../../../shared/uikit/icons/YT";
+import VK from "../../../shared/uikit/icons/VK";
+import TG from "../../../shared/uikit/icons/TG";
+import Logo from "../../../shared/uikit/icons/Logo";
+import Name from "../../../shared/uikit/icons/Name";
+import TabSwitch from "../../../features/template/TabSwitch/TabSwitch";
 
 const Footer: FC = () => {
   return (

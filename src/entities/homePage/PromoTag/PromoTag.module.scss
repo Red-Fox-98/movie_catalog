@@ -1,0 +1,25 @@
+.additional_tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    fill: #6a11cb;
+  }
+}
+
+.title {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.17px;
+}

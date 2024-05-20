@@ -1,0 +1,25 @@
+.catalog_additional_tags_grid {
+  position: absolute;
+  width: 510px;
+  height: 60px;
+  top: 140px;
+  left: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.catalog_additional_tags_left {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalog_additional_tags_right {
+  width: 302px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

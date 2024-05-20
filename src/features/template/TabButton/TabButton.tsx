@@ -1,6 +1,6 @@
-import { FC, ReactNode } from 'react';
-import Styles from './TabButton.module.scss';
-import { clsx } from 'clsx';
+import { FC, ReactNode } from "react";
+import Styles from "./TabButton.module.scss";
+import { clsx } from "clsx";
 
 interface TabButtonProps {
   name: string;
