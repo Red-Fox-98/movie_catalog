@@ -1,16 +1,16 @@
-import { FC, useState } from 'react';
-import Styles from './TabSwitch.module.scss';
-import TabButton from '../TabButton/TabButton';
+import { FC, useState } from "react";
+import Styles from "./TabSwitch.module.scss";
+import TabButton from "../TabButton/TabButton";
 
 /*icons*/
-import Main from '../../../shared/uikit/icons/Main';
-import Movies from '../../../shared/uikit/icons/Movies';
-import Serials from '../../../shared/uikit/icons/Serials';
-import TVChannels from '../../../shared/uikit/icons/TVChannels';
-import Mine from '../../../shared/uikit/icons/Mine';
+import Main from "../../../shared/uikit/icons/Main";
+import Movies from "../../../shared/uikit/icons/Movies";
+import Serials from "../../../shared/uikit/icons/Serials";
+import TVChannels from "../../../shared/uikit/icons/TVChannels";
+import Mine from "../../../shared/uikit/icons/Mine";
 
 const TabSwitch: FC = () => {
-  const [currentSection, setSection] = useState('Главная');
+  const [currentSection, setSection] = useState("Главная");
 
   const changingActivityStatus = (name: string) => {
     setSection(name);
@@ -24,34 +24,34 @@ const TabSwitch: FC = () => {
     <div className={Styles.tabBarTabletForm}>
       <div className={Styles.tabBarTablet}>
         <TabButton
-          name={'Главная'}
+          name={"Главная"}
           icon={<Main />}
           onClick={changingActivityStatus}
-          isActive={checkStatus('Главная')}
+          isActive={checkStatus("Главная")}
         />
         <TabButton
-          name={'Фильмы'}
+          name={"Фильмы"}
           icon={<Movies />}
           onClick={changingActivityStatus}
-          isActive={checkStatus('Фильмы')}
+          isActive={checkStatus("Фильмы")}
         />
         <TabButton
-          name={'Сериалы'}
+          name={"Сериалы"}
           icon={<Serials />}
           onClick={changingActivityStatus}
-          isActive={checkStatus('Сериалы')}
+          isActive={checkStatus("Сериалы")}
         />
         <TabButton
-          name={'ТВ-каналы'}
+          name={"ТВ-каналы"}
           icon={<TVChannels />}
           onClick={changingActivityStatus}
-          isActive={checkStatus('ТВ-каналы')}
+          isActive={checkStatus("ТВ-каналы")}
         />
         <TabButton
-          name={'Моё'}
+          name={"Моё"}
           icon={<Mine />}
           onClick={changingActivityStatus}
-          isActive={checkStatus('Моё')}
+          isActive={checkStatus("Моё")}
         />
       </div>
     </div>

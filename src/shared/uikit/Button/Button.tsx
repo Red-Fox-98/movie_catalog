@@ -1,24 +1,29 @@
-import { FC, ReactNode } from 'react';
-import Style from './Button.module.scss';
+import { FC, ReactNode } from "react";
+import Styles from "./Button.module.scss";
+import { clsx } from "clsx";
 
-type ButtonContentType = string | ReactNode;
-type ButtonVariantType = 'primary' | 'secondary';
+type ButtonVariantType = "primary" | "secondary";
+type SizeType = "m" | "l" | "s";
 
 interface ButtonProps {
-  name: ButtonContentType;
+  value: string | ReactNode;
   variant: ButtonVariantType;
-  width: number;
-  height: number;
-  font_size?: number;
+  size: SizeType;
+  isWide?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ name, variant, width, height, font_size }) => {
+const Button: FC<ButtonProps> = ({ value, variant, size, isWide }) => {
   return (
     <button
-      style={{ width: width, height: height, fontSize: font_size }}
-      className={Style[variant]}
+      className={clsx(
+        Styles[variant],
+        size === "m" && Styles.medium,
+        size === "l" && Styles.large,
+        size === "s" && Styles.small,
+        isWide && Styles.wide
+      )}
     >
-      {name}
+      {value}
     </button>
   );
 };

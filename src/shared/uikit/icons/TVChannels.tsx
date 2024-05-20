@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 const TVChannels: FC = () => {
   return (
-    <div style={{ position: 'relative', width: `24px`, height: `24px` }}>
-      <div style={{ position: 'absolute' }}>
+    <div style={{ position: "relative", width: "24px", height: "24px" }}>
+      <div style={{ position: "absolute" }}>
         <svg
           width='21'
           height='20'
@@ -15,7 +15,7 @@ const TVChannels: FC = () => {
         </svg>
       </div>
 
-      <div style={{ position: 'absolute', left: `4px`, top: `2px` }}>
+      <div style={{ position: "absolute", left: "4px", top: "2px" }}>
         <svg width='5' height='3' viewBox='0 0 5 3' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <path d='M0.75 0.5H4.75V2.5H0.75V0.5Z' />
         </svg>
