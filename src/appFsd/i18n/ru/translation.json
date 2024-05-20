@@ -1,5 +1,11 @@
 {
   "lang": "ru",
+  "movieCatalog": {
+    "pageType": {
+      "home": "Подробнее",
+      "movie": "Смотреть"
+    }
+  },
   "homePage": {
     "movieStatus": {
       "premiere": "Премьера",

@@ -6,7 +6,7 @@ interface TagsProps {
   movieInfo: MovieInfo;
 }
 
-const TrailerSectionTagsTags: FC<TagsProps> = ({ movieInfo }) => {
+const TrailerSectionTags: FC<TagsProps> = ({ movieInfo }) => {
   return (
     <div className={Styles.tags}>
       <div className={Styles.rating}>{movieInfo["rating"]}</div>
@@ -18,4 +18,4 @@ const TrailerSectionTagsTags: FC<TagsProps> = ({ movieInfo }) => {
   );
 };
 
-export default TrailerSectionTagsTags;
+export default TrailerSectionTags;

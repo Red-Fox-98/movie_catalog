@@ -1,4 +1,4 @@
-import { MovieInfo, MovieWeek, NewMovieInfo } from "./types";
+import { additionalMovieInformation, MovieInfo, MovieWeek, NewMovieInfo } from "./types";
 
 import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
 import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
@@ -21,6 +21,10 @@ import topNine from "../../api/home/weekTop/9.png";
 import topTen from "../../api/home/weekTop/10.png";
 
 export const MovieInfoMock: MovieInfo = {
+  name: "Аватар: Легенда об Аанге",
+  description:
+    "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+  link: "avatar-legenda-ob-aange",
   preview: previewAvatarLegendOfAang.src,
   logo: logoAvatarLegendOfAang.src,
   rating: "7,9",
