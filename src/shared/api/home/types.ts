@@ -11,16 +11,20 @@ export interface MovieInfo {
   genre: string;
   country: string;
   ageRating: string;
+  seasonsNumber?: number;
 }
 
-export interface additionalMovieInformation {
-  seasonNumber?: {
-    seasonsNumber: number;
-    seriesNumber: number;
-  };
-  series?: {
-    statusFilm: string;
-  };
+export interface VideoInformation {
+  id: number;
+  season?: number;
+  episode?: number;
+  preview: string;
+  duration: string;
+  statusEpisode: string;
+}
+
+export interface AdditionalMovieInformation {
+  description: string;
 }
 
 export interface NewMovieInfo {

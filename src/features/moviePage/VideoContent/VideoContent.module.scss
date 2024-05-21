@@ -1,3 +1,26 @@
 .content {
+  position: relative;
   height: 315px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headlines {
+  width: 555px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.72px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.activeTitle {
+  color: rgba(255, 255, 255, 1);
 }

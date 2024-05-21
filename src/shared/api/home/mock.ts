@@ -1,4 +1,10 @@
-import { additionalMovieInformation, MovieInfo, MovieWeek, NewMovieInfo } from "./types";
+import {
+  AdditionalMovieInformation,
+  MovieInfo,
+  MovieWeek,
+  NewMovieInfo,
+  VideoInformation
+} from "./types";
 
 import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
 import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
@@ -20,6 +26,11 @@ import topEight from "../../api/home/weekTop/8.png";
 import topNine from "../../api/home/weekTop/9.png";
 import topTen from "../../api/home/weekTop/10.png";
 
+import firstSeries from "../../uikit/images/Series/first_series.png";
+import secondSeries from "../../uikit/images/Series/second_series.png";
+import thirdSeries from "../../uikit/images/Series/third_series.png";
+import fourthSeries from "../../uikit/images/Series/fourth_series.png";
+
 export const MovieInfoMock: MovieInfo = {
   name: "Аватар: Легенда об Аанге",
   description:
@@ -31,7 +42,48 @@ export const MovieInfoMock: MovieInfo = {
   year: 2024,
   genre: "Фэнтези",
   country: "США",
-  ageRating: "16+"
+  ageRating: "16+",
+  seasonsNumber: 4
+};
+
+export const VideoInformationMock: VideoInformation[] = [
+  {
+    id: 0,
+    season: 1,
+    episode: 1,
+    preview: firstSeries.src,
+    duration: "43:54",
+    statusEpisode: "Просмотрено"
+  },
+  {
+    id: 1,
+    season: 1,
+    episode: 2,
+    preview: secondSeries.src,
+    duration: "43:54",
+    statusEpisode: "Просмотрено"
+  },
+  {
+    id: 2,
+    season: 1,
+    episode: 3,
+    preview: thirdSeries.src,
+    duration: "43:54",
+    statusEpisode: "Просмотрено"
+  },
+  {
+    id: 3,
+    season: 1,
+    episode: 4,
+    preview: fourthSeries.src,
+    duration: "43:54",
+    statusEpisode: "Просмотрено"
+  }
+];
+
+export const AdditionalMovieInformationMock: AdditionalMovieInformation = {
+  description:
+    "Прекрасная планета Пандорра по-прежнему похожа на рай, где нашел себе приют бывший солдат Салли. Подрастают дети его нового народа, они играют на морских рифах и в подводном царстве. Кроме подростков на’ви на Пандорре растет и земной ребенок Джек Чемпион. Воскресают те, кто умер в былых сражениях: героиня Сигурни Уивер и зловещий полковник. Наконец, и земные корпорации снова предъявляют свои права на богатства Пандорры. Независимость фантастического первобытного рая придется отстаивать всем, кто его населяет."
 };
 
 export const NewMoviesInfoMock: NewMovieInfo[] = [
