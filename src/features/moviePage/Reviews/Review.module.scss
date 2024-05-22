@@ -1,0 +1,63 @@
+.content {
+  width: 928px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.headlines {
+  width: 896px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewTvoe {
+  display: flex;
+  height: 26px;
+  gap: 14px;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.6px;
+}
+
+.createReviewBtn {
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: rgba(188, 136, 255, 1);
+}
+
+.sectiondTitle {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.72px;
+}
+
+.title {
+  width: 89px;
+  height: 31px;
+}
+
+.icon {
+  padding: 11px 11px 8px;
+  svg {
+    width: 9.49px;
+    height: 15.22px;
+  }
+}
+
+.comments {
+  width: 928px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}

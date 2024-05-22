@@ -29,6 +29,16 @@ export interface AdditionalMovieInformation {
   description: string;
 }
 
+export interface IReview {
+  id: number;
+  name: string;
+  day: number;
+  month: number;
+  year: number;
+  appraisal: number;
+  commentary: string;
+}
+
 export interface NewMovieInfo {
   id: number;
   preview: string;
