@@ -1,0 +1,29 @@
+.content {
+  width: 928px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headlines {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.titleBtn {
+  padding: 6px 8px 6px 8px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.72px;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.activeTitle {
+  color: rgba(255, 255, 255, 1);
+}

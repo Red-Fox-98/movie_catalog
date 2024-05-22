@@ -10,9 +10,14 @@ interface ButtonProps {
   variant: ButtonVariantType;
   size: SizeType;
   isWide?: boolean;
+  link?: string;
 }
 
-const Button: FC<ButtonProps> = ({ value, variant, size, isWide }) => {
+const Button: FC<ButtonProps> = ({ value, variant, size, isWide, link }) => {
+  const linking = (link: string) => {
+    typeof link !== "undefined" && window.location.assign(`http://localhost:3000/${link}`);
+  };
+
   return (
     <button
       className={clsx(
@@ -22,6 +27,7 @@ const Button: FC<ButtonProps> = ({ value, variant, size, isWide }) => {
         size === "s" && Styles.small,
         isWide && Styles.wide
       )}
+      onClick={() => linking(link)}
     >
       {value}
     </button>

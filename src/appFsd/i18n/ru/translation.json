@@ -1,9 +1,26 @@
 {
   "lang": "ru",
+  "movieCatalog": {
+    "pageType": {
+      "home": "Подробнее",
+      "movie": "Смотреть"
+    }
+  },
   "homePage": {
     "movieStatus": {
       "premiere": "Премьера",
       "newSeason": "Новый сезон"
+    }
+  },
+  "moviePage": {
+    "informationTitle": {
+      "description": "Описание",
+      "filmCrew": "Съемочная группа",
+      "information": "Информация"
+    },
+    "movieTitle": {
+      "trailer": "Трейлер",
+      "season": "сезон"
     }
   }
 }

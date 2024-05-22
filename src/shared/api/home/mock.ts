@@ -1,4 +1,11 @@
-import { MovieInfo, MovieWeek, NewMovieInfo } from "./types";
+import {
+  VideoInformation,
+  AdditionalMovieInformation,
+  MovieInfo,
+  MovieWeek,
+  NewMovieInfo,
+  IReview
+} from "./types";
 
 import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
 import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
@@ -20,14 +27,101 @@ import topEight from "../../api/home/weekTop/8.png";
 import topNine from "../../api/home/weekTop/9.png";
 import topTen from "../../api/home/weekTop/10.png";
 
+import firstSeries from "../../uikit/images/Series/first_series.png";
+import secondSeries from "../../uikit/images/Series/second_series.png";
+import thirdSeries from "../../uikit/images/Series/third_series.png";
+import fourthSeries from "../../uikit/images/Series/fourth_series.png";
+
 export const MovieInfoMock: MovieInfo = {
+  name: "Аватар: Легенда об Аанге",
+  description:
+    "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+  link: "avatar-legenda-ob-aange",
   preview: previewAvatarLegendOfAang.src,
   logo: logoAvatarLegendOfAang.src,
   rating: "7,9",
   year: 2024,
   genre: "Фэнтези",
   country: "США",
-  ageRating: "16+"
+  ageRating: "16+",
+  seasonsNumber: 4
+};
+
+export const VideoInformationMock: VideoInformation[] = [
+  {
+    id: 0,
+    type: "season",
+    season: 1,
+    episode: 1,
+    preview: firstSeries.src,
+    duration: "43:54",
+    status: "Просмотрено"
+  },
+  {
+    id: 1,
+    type: "season",
+    season: 1,
+    episode: 2,
+    preview: secondSeries.src,
+    duration: "43:54",
+    status: "Просмотрено"
+  },
+  {
+    id: 2,
+    type: "season",
+    season: 1,
+    episode: 3,
+    preview: thirdSeries.src,
+    duration: "43:54",
+    status: "Просмотрено"
+  },
+  {
+    id: 3,
+    type: "season",
+    season: 1,
+    episode: 4,
+    preview: fourthSeries.src,
+    duration: "43:54",
+    status: "Просмотрено"
+  }
+];
+
+export const ReviewsMock: IReview[] = [
+  {
+    id: 0,
+    name: "Николай",
+    day: 10,
+    month: 5,
+    year: 2023,
+    appraisal: 9,
+    commentary:
+      "Как по мне, обсуждать качество сериала довольно глупо. Субъективно для меня — оно очевидно плохого уровня. Это ни капельки не похоже на Ведьмака, к которому мы привыкли в играх и книгах. Отсутствие оригинальности в сюжете и персонажах делает сериал предсказуемым и скучным. В общем, «Ведьмак» - это просто пустая траты времени и потерянный потенциал. Я разочарован и не рекомендую этот сериал никому."
+  },
+  {
+    id: 1,
+    name: "Николай",
+    day: 10,
+    month: 5,
+    year: 2023,
+    appraisal: 9,
+    commentary:
+      "Как по мне, обсуждать качество сериала довольно глупо. Субъективно для меня — оно очевидно плохого уровня. Это ни капельки не похоже на Ведьмака, к которому мы привыкли в играх и книгах. Отсутствие оригинальности в сюжете и персонажах делает сериал предсказуемым и скучным. В общем, «Ведьмак» - это просто пустая траты времени и потерянный потенциал. Я разочарован и не рекомендую этот сериал никому."
+  },
+  {
+    id: 2,
+    name: "Николай",
+    day: 10,
+    month: 5,
+    year: 2023,
+    appraisal: 9,
+    commentary:
+      "Как по мне, обсуждать качество сериала довольно глупо. Субъективно для меня — оно очевидно плохого уровня. Это ни капельки не похоже на Ведьмака, к которому мы привыкли в играх и книгах. Отсутствие оригинальности в сюжете и персонажах делает сериал предсказуемым и скучным. В общем, «Ведьмак» - это просто пустая траты времени и потерянный потенциал. Я разочарован и не рекомендую этот сериал никому."
+  }
+];
+
+export const AdditionalMovieInformationMock: AdditionalMovieInformation = {
+  description:
+    "Прекрасная планета Пандорра по-прежнему похожа на рай, где нашел себе приют бывший солдат Салли. Подрастают дети его нового народа, они играют на морских рифах и в подводном царстве. Кроме подростков на’ви на Пандорре растет и земной ребенок Джек Чемпион. Воскресают те, кто умер в былых сражениях: героиня Сигурни Уивер и зловещий полковник. Наконец, и земные корпорации снова предъявляют свои права на богатства Пандорры. Независимость фантастического первобытного рая придется отстаивать всем, кто его населяет."
 };
 
 export const NewMoviesInfoMock: NewMovieInfo[] = [

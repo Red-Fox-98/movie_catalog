@@ -21,7 +21,6 @@
 }
 
 .info {
-  height: 220px;
   padding: 0 32px 0 32px;
   display: flex;
   flex-direction: column;
@@ -35,6 +34,14 @@
   z-index: 1;
 }
 
+.description {
+  width: 554px;
+  height: 104px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.6px;
+}
+
 .buttonsBlock {
   width: 476px;
   display: flex;
@@ -44,6 +51,7 @@
 .softkeyGroup {
   display: flex;
   gap: 8px;
+
   svg {
     display: flex;
     align-items: center;
