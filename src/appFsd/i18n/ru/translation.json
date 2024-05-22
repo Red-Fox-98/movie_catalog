@@ -11,5 +11,16 @@
       "premiere": "Премьера",
       "newSeason": "Новый сезон"
     }
+  },
+  "moviePage": {
+    "informationTitle": {
+      "description": "Описание",
+      "filmCrew": "Съемочная группа",
+      "information": "Информация"
+    },
+    "movieTitle": {
+      "trailer": "Трейлер",
+      "season": "сезон"
+    }
   }
 }

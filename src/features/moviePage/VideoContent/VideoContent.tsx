@@ -1,8 +1,10 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Styles from "./VideoContent.module.scss";
 import { VideoInformation } from "src/shared/api/home/types";
 import { clsx } from "clsx";
 import Video from "src/features/moviePage/Video/Video";
+import { getTitles } from "src/features/moviePage/VideoContent/helpers";
+import { useTranslation } from "react-i18next";
 
 interface VideoContentProps {
   countSeasons: number;
@@ -10,30 +12,34 @@ interface VideoContentProps {
 }
 
 const VideoContent: FC<VideoContentProps> = ({ countSeasons, videos }) => {
-  const getSeasonNumbers = (i = 0) => {
-    const seasonNumbers: number[] = [];
-    while (i < countSeasons) {
-      seasonNumbers.push(++i);
-    }
-    return seasonNumbers;
+  const { t } = useTranslation();
+  const [currentTitle, setCurrentTitle] = useState(`1 ${t("moviePage.movieTitle.season")}`);
+  const headlines: string[] = countSeasons
+    ? [].concat(
+        [t("moviePage.movieTitle.trailer")],
+        getTitles(countSeasons, t("moviePage.movieTitle.season"))
+      )
+    : [t("moviePage.movieTitle.trailer")];
+
+  const changeCurrentTitle = (title: string) => {
+    setCurrentTitle(title);
   };
 
   return (
     <div className={Styles.content}>
       <div className={Styles.headlines}>
-        <div className={Styles.title}>{"Трейлер"}</div>
         {countSeasons > 0 &&
-          getSeasonNumbers().map((seasonNumber) => (
-            <div
-              className={clsx(
-                Styles.title,
-                seasonNumber === videos[0]?.season && Styles.activeTitle
-              )}
-              key={seasonNumber}
-            >{`${seasonNumber} сезон`}</div>
+          headlines.map((title) => (
+            <button
+              key={title}
+              onClick={() => changeCurrentTitle(title)}
+              className={clsx(Styles.titleBtn, title === currentTitle && Styles.activeTitle)}
+            >
+              {title}
+            </button>
           ))}
       </div>
-      {videos.length !== 0 && <Video videos={videos} />}
+      {videos.length !== 0 && <Video videoBlockTitle={currentTitle} videos={videos} />}
     </div>
   );
 };

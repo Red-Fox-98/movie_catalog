@@ -1,10 +1,11 @@
 import {
+  VideoInformation,
   AdditionalMovieInformation,
   MovieInfo,
   MovieWeek,
-  NewMovieInfo,
-  VideoInformation
+  NewMovieInfo
 } from "./types";
+// import { VideoInformation } from "src/features/moviePage/VideoContent/types";
 
 import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
 import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
@@ -49,35 +50,39 @@ export const MovieInfoMock: MovieInfo = {
 export const VideoInformationMock: VideoInformation[] = [
   {
     id: 0,
+    type: "season",
     season: 1,
     episode: 1,
     preview: firstSeries.src,
     duration: "43:54",
-    statusEpisode: "Просмотрено"
+    status: "Просмотрено"
   },
   {
     id: 1,
+    type: "season",
     season: 1,
     episode: 2,
     preview: secondSeries.src,
     duration: "43:54",
-    statusEpisode: "Просмотрено"
+    status: "Просмотрено"
   },
   {
     id: 2,
+    type: "season",
     season: 1,
     episode: 3,
     preview: thirdSeries.src,
     duration: "43:54",
-    statusEpisode: "Просмотрено"
+    status: "Просмотрено"
   },
   {
     id: 3,
+    type: "season",
     season: 1,
     episode: 4,
     preview: fourthSeries.src,
     duration: "43:54",
-    statusEpisode: "Просмотрено"
+    status: "Просмотрено"
   }
 ];
 

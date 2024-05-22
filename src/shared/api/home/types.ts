@@ -13,14 +13,16 @@ export interface MovieInfo {
   ageRating: string;
   seasonsNumber?: number;
 }
+type videoType = "trailer" | "season";
 
 export interface VideoInformation {
   id: number;
+  type: videoType;
   season?: number;
   episode?: number;
   preview: string;
   duration: string;
-  statusEpisode: string;
+  status?: string;
 }
 
 export interface AdditionalMovieInformation {

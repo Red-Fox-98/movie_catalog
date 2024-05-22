@@ -1,18 +1,11 @@
 .series {
-  position: absolute;
-  height: 252px;
   display: flex;
   gap: 20px;
-
   overflow: hidden;
-  right: -32px;
-  bottom: 0;
-  left: 0;
 }
 
-.episode {
+.video {
   width: 325px;
-
   display: flex;
   flex-direction: column;
   gap: 8px;

@@ -2,14 +2,14 @@ import { FC } from "react";
 import Styles from "./TrailerSection.module.scss";
 import Image from "next/image";
 import { MovieInfo } from "src/shared/api/home/types";
+import TrailerSectionTags from "src/entities/TrailerSectionTags/TrailerSectionTags";
+import { useTranslation } from "react-i18next";
 
 /*icons*/
 import Marker from "../../shared/uikit/icons/Marker";
 import Heart from "../../shared/uikit/icons/Heart";
 import Share from "../../shared/uikit/icons/Share";
 import Button from "../../shared/uikit/Button/Button";
-import TrailerSectionTags from "src/entities/TrailerSectionTags/TrailerSectionTags";
-import { useTranslation } from "react-i18next";
 
 type TrailerSectionType = "home" | "movie";
 
