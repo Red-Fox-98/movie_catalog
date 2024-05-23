@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 import Styles from "./NewMovies.module.scss";
-import { NewMovieInfo } from "../../../shared/api/home/types";
+import { NewMovieInfo } from "src/shared/api/home/types";
 import Image from "next/image";
 import MovieStatusLabel from "../../../entities/homePage/MovieStatusLabel/MovieStatusLabel";
 

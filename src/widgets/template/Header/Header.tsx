@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Styles from "./Header.module.scss";
 import Logo from "../../../shared/uikit/icons/Logo";
 import Name from "../../../shared/uikit/icons/Name";
@@ -27,11 +27,11 @@ const Header: FC = () => {
         </div>
         <button className={Styles.promoCodeButton}>
           {"Промокод"}
-          {window.innerWidth < 376 && <Auth />}
+          <Auth />
         </button>
         <button className={Styles.authButton}>
           {"Войти"}
-          {window.innerWidth < 376 && <Bell />}
+          <Bell />
         </button>
       </div>
     </div>

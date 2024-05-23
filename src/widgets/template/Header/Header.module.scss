@@ -80,6 +80,10 @@
   font-weight: 500;
   line-height: 20.48px;
   text-align: center;
+
+  svg {
+    display: none;
+  }
 }
 
 .authButton {
@@ -89,11 +93,13 @@
   border-radius: 12px;
 
   font-size: 24px;
-  font-weight: 500;
   line-height: 30.72px;
   letter-spacing: 0.10000000149011612px;
-  text-align: left;
   color: rgba(186, 186, 186, 1);
+
+  svg {
+    display: none;
+  }
 }
 
 @media (max-width: 376px) {
@@ -123,7 +129,7 @@
   }
 
   .input {
-    width: 0;
+    display: none;
   }
 
   .searchButton {
@@ -139,7 +145,7 @@
     justify-content: center;
     align-items: center;
 
-    svg{
+    svg {
       width: 19px;
       height: 19px;
     }
@@ -163,5 +169,8 @@
 
     background-color: rgba(255, 255, 255, 0.05);
 
+    svg{
+      display: block;
+    }
   }
 }
