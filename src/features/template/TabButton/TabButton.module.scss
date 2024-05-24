@@ -61,7 +61,7 @@
 
 @media (max-width: 375px) {
   .tabButton {
-    width: 64px;
-    height: 50px;
+    max-width: 64px;
+    max-height: 50px;
   }
 }

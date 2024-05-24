@@ -22,14 +22,9 @@ const TrailerSection: FC<TrailerSectionProps> = ({ movieInfo, pageType }) => {
   const { t } = useTranslation();
   return (
     <div className={Styles.trailerSection}>
-      <Image
-        className={Styles.preview}
-        src={movieInfo["preview"]}
-        alt={"preview"}
-        width={1231}
-        height={692}
-        priority
-      />
+      <div className={Styles.preview}>
+        <Image src={movieInfo["preview"]} alt={"preview"} width={1231} height={692} priority />
+      </div>
       <div className={Styles.info}>
         <Image src={movieInfo["logo"]} alt={"logo"} width={338} height={101} />
         <TrailerSectionTags movieInfo={movieInfo} />
