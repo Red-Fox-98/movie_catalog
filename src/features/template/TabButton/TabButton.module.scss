@@ -14,6 +14,27 @@
   border: 0;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    fill: rgba(186, 186, 186, 1);
+  }
+}
+
+.name {
+  z-index: 1;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12.8px;
+  text-align: left;
+  color: rgba(186, 186, 186, 1);
+}
+
 .activeTabButton {
   content: "";
   height: 53px;
@@ -28,23 +49,19 @@
   transform: translate(-50%, -50%);
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.activeIcon {
   svg {
     fill: rgba(255, 255, 255, 1);
   }
 }
 
-.name {
-  z-index: 1;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12.8px;
-  text-align: left;
-  color: rgba(186, 186, 186, 1);
+.activeName {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 375px) {
+  .tabButton {
+    width: 64px;
+    height: 50px;
+  }
 }
