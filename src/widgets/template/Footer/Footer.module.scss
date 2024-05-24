@@ -55,6 +55,7 @@
   display: flex;
   gap: 24px;
   text-align: center;
+
   a {
     display: flex;
     align-items: center;
@@ -71,6 +72,7 @@
 .socialIcon {
   height: 24px;
   width: 24px;
+
   svg {
     fill: white;
     fill-opacity: 0.3;
@@ -123,6 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   svg {
     fill: rgba(255, 255, 255, 0.3);
   }
@@ -142,11 +145,12 @@
     width: auto;
     height: auto;
     padding: 28px 16px;
+    gap: 0;
   }
 
   .footer {
     width: 375px;
-    height: 661px;
+    height: 639px;
     display: flex;
     gap: 24px;
   }
@@ -184,6 +188,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     a {
       gap: 2px;
       color: rgba(255, 255, 255, 0.3);
@@ -221,16 +226,14 @@
 
   .aboutForm {
     position: relative;
-    height: 75px;
+
+    width: 343px;
+    height: 115px;
     flex-direction: column;
-    justify-content: center;
-    gap: 48px;
   }
 
   .about {
     position: absolute;
-    display: flex;
-    justify-content: center;
     text-align: center;
     left: 50%;
     bottom: -24px;
@@ -243,18 +246,22 @@
     height: 33px;
     display: flex;
     gap: 12px;
+
     svg {
       width: auto;
       height: auto;
     }
   }
 
+  .btn {
+    display: none;
+  }
+
   .probeBtn {
-    position: absolute;
+    height: 48px;
     display: block;
-    left: 0;
-    right: 0;
-    bottom: -68px;
+    margin-bottom: 10px;
+
     button {
       width: 343px;
     }

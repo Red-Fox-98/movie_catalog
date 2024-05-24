@@ -10,8 +10,10 @@ import Logo from "../../../shared/uikit/icons/Logo";
 import Name from "../../../shared/uikit/icons/Name";
 import Button from "src/shared/uikit/Button/Button";
 import Gift from "src/shared/uikit/icons/Gift";
+import { useRouter } from "next/router";
 
 const Footer: FC = () => {
+  const currentLink = useRouter();
   return (
     <div className={Styles.content}>
       <div className={Styles.footer}>
@@ -63,11 +65,14 @@ const Footer: FC = () => {
             </div>
             <div className={Styles.btn}></div>
           </div>
-          <div className={Styles.probeBtn}>
-            <Button value={"Попробовать бесплатно"} variant={"primary"} size={"m"} />
-          </div>
         </div>
       </div>
+
+      {currentLink.pathname === "/" && (
+        <div className={Styles.probeBtn}>
+          <Button value={"Попробовать бесплатно"} variant={"primary"} size={"m"} />
+        </div>
+      )}
 
       <TabSwitch />
     </div>
