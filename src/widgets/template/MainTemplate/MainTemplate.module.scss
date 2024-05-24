@@ -1,4 +1,5 @@
 .mainTemplate {
+  font-family: $font-main;
   background: #09090c;
   width: 960px;
   display: flex;
@@ -8,7 +9,7 @@
   overflow: hidden;
 }
 
-@media(max-width: 376px) {
+@media (max-width: 376px) {
   .mainTemplate {
     max-width: 100%;
     overflow: hidden;
