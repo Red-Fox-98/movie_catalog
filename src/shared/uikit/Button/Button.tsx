@@ -3,7 +3,7 @@ import Styles from "./Button.module.scss";
 import { clsx } from "clsx";
 
 type ButtonVariantType = "primary" | "secondary";
-type SizeType = "m" | "l" | "s";
+export type SizeType = "m" | "l" | "s";
 
 interface ButtonProps {
   value: string | ReactNode;

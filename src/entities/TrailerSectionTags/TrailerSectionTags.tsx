@@ -2,7 +2,6 @@ import { FC } from "react";
 import Styles from "./TrailerSectionTags.module.scss";
 import { MovieInfo } from "src/shared/api/home/types";
 import { clsx } from "clsx";
-import { useRouter } from "next/router";
 import { TrailerSectionType } from "src/widgets/trailerSection/TrailerSection";
 
 interface TagsProps {

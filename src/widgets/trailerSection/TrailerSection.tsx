@@ -1,15 +1,16 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Styles from "./TrailerSection.module.scss";
 import Image from "next/image";
 import { MovieInfo } from "src/shared/api/home/types";
 import TrailerSectionTags from "src/entities/TrailerSectionTags/TrailerSectionTags";
 import { useTranslation } from "react-i18next";
+import { getSizeBtn } from "src/widgets/trailerSection/helpers";
 
 /*icons*/
 import Marker from "../../shared/uikit/icons/Marker";
 import Heart from "../../shared/uikit/icons/Heart";
 import Share from "../../shared/uikit/icons/Share";
-import Button from "../../shared/uikit/Button/Button";
+import Button, { SizeType } from "../../shared/uikit/Button/Button";
 import { useRouter } from "next/router";
 import { clsx } from "clsx";
 import RightArrow from "src/shared/uikit/icons/RightArrow";
@@ -24,7 +25,11 @@ interface TrailerSectionProps {
 const TrailerSection: FC<TrailerSectionProps> = ({ pageType, movieInfo }) => {
   const currentLink = useRouter();
   const { t } = useTranslation();
-  const currentWidth = typeof window !== "undefined" && window.outerWidth;
+  const [sizeBtn, setSizeBtn] = useState<SizeType>("l");
+
+  useEffect(() => {
+    setSizeBtn(getSizeBtn(window.innerWidth));
+  }, []);
 
   return (
     <div
@@ -61,35 +66,18 @@ const TrailerSection: FC<TrailerSectionProps> = ({ pageType, movieInfo }) => {
             currentLink.pathname === "/" && Styles.hideButtonsBlock
           )}
         >
-          <div className={Styles.primaryBtn}>
-            <Button
-              value={t(`movieCatalog.pageType.${pageType}`)}
-              variant={"primary"}
-              size={currentWidth <= 375 ? "m" : "l"}
-              isWide={true}
-              link={movieInfo.link}
-            />
-          </div>
+          <Button
+            value={t(`movieCatalog.pageType.${pageType}`)}
+            variant={"primary"}
+            size={sizeBtn}
+            isWide={true}
+            link={movieInfo.link}
+          />
 
           <div className={Styles.softkeyGroup}>
-            <Button
-              value={<Marker />}
-              variant={"secondary"}
-              size={currentWidth <= 375 ? "m" : "l"}
-              isWide={currentWidth <= 375}
-            />
-            <Button
-              value={<Heart />}
-              variant={"secondary"}
-              size={currentWidth <= 375 ? "m" : "l"}
-              isWide={currentWidth <= 375}
-            />
-            <Button
-              value={<Share />}
-              variant={"secondary"}
-              size={currentWidth <= 375 ? "m" : "l"}
-              isWide={currentWidth <= 375}
-            />
+            <Button value={<Marker />} variant={"secondary"} size={sizeBtn} />
+            <Button value={<Heart />} variant={"secondary"} size={sizeBtn} />
+            <Button value={<Share />} variant={"secondary"} size={sizeBtn} />
           </div>
         </div>
       </div>
