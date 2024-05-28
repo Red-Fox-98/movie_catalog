@@ -1,10 +1,11 @@
 .moviesWeek {
   position: relative;
-  width: 896px;
+  width: 928px;
   height: 424px;
   display: flex;
   gap: 16px;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .title {
@@ -18,24 +19,27 @@
 
 .movies {
   position: absolute;
+  width: 1089px;
   bottom: 0;
   left: 0;
   right: -32px;
   display: flex;
   gap: 20px;
-  overflow: hidden;
 }
 
 .movie {
   position: relative;
   height: 370px;
   min-width: 333px;
+  max-width: 333px;
+  margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
 .movie:last-child {
   min-width: 453px;
+  max-width: 453px;
 }
 
 .peviewMovie {
