@@ -8,7 +8,6 @@ import PromoNotice from "src/entities/homePage/PromoNotice/PromoNotice";
 import AdditionalTagsPromo from "src/entities/homePage/AdditionalTagsPromo/AdditionalTagsPromo";
 import Button from "src/shared/uikit/Button/Button";
 
-import popcorn from "src/shared/uikit/images/Promo/Popcorn.png";
 import colors from "src/shared/uikit/images/Promo/Colors.png";
 
 const Promo: FC = () => {
@@ -21,15 +20,13 @@ const Promo: FC = () => {
       </div>
 
       <div className={Styles.background}>
-        <div className={Styles.image}>
-          <Image src={popcorn} alt={"image"} />
-        </div>
+        <div className={Styles.image}></div>
         <div className={Styles.colors}>
-          <Image src={colors} alt={"image"} />
+          <Image src={colors} alt={"image"} priority />
         </div>
-        <PromoNotice value={"Субтитры"} top={77} left={251} rotation={-13.77} />
-        <PromoNotice value={"Дубляж"} top={158} left={280} rotation={26.7} />
-        <PromoNotice value={"Full HD"} top={238} left={265} rotation={-13.77} />
+        <PromoNotice value={"Субтитры"} className={Styles.adaptive1} />
+        <PromoNotice value={"Дубляж"} className={Styles.adaptive2} />
+        <PromoNotice value={"Full HD"} className={Styles.adaptive3} />
       </div>
     </div>
   );

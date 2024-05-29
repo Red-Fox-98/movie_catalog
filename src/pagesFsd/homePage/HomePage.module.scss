@@ -4,3 +4,9 @@
   align-items: center;
   gap: 64px;
 }
+
+@media (max-width: 375px) {
+  .home{
+    gap: 32px;
+  }
+}

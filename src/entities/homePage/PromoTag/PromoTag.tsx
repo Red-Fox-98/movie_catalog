@@ -8,7 +8,7 @@ interface PromoTagProps {
 
 const PromoTag: FC<PromoTagProps> = ({ value, icon }) => {
   return (
-    <div className={Styles.additional_tag}>
+    <div className={Styles.tag}>
       <div className={Styles.icon}>{icon}</div>
       <div className={Styles.title}>{value}</div>
     </div>

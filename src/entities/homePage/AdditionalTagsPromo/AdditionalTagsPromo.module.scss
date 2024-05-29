@@ -23,3 +23,14 @@
   flex-direction: column;
   gap: 12px;
 }
+
+@media (max-width: 375px) {
+  .catalog_additional_tags_grid {
+    width: 303px;
+    height: auto;
+    gap: 12px;
+    flex-direction: column;
+
+    position: unset;
+  }
+}
