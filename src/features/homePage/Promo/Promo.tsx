@@ -7,8 +7,8 @@ import Image from "next/image";
 import PromoNotice from "src/entities/homePage/PromoNotice/PromoNotice";
 import AdditionalTagsPromo from "src/entities/homePage/AdditionalTagsPromo/AdditionalTagsPromo";
 import Button from "src/shared/uikit/Button/Button";
-
 import colors from "src/shared/uikit/images/Promo/Colors.png";
+import Popcorn from "src/shared/uikit/images/Promo/Popcorn";
 
 const Promo: FC = () => {
   return (
@@ -20,7 +20,9 @@ const Promo: FC = () => {
       </div>
 
       <div className={Styles.background}>
-        <div className={Styles.image}></div>
+        <div className={Styles.image}>
+          <Popcorn />
+        </div>
         <div className={Styles.colors}>
           <Image src={colors} alt={"image"} priority />
         </div>

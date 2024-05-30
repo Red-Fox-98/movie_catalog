@@ -8,7 +8,7 @@ import HomepageContent from "src/widgets/homePage/HomepageContent/HomepageConten
 const HomePage: FC = () => {
   return (
     <div className={Styles.home}>
-      <TrailerSection pageType={"home"} movieInfo={MovieInfoMock} />
+      <TrailerSection pageType={"home"} moviesInfo={MovieInfoMock} />
       <HomepageContent />
     </div>
   );

@@ -16,9 +16,7 @@ const TrailerSectionTags: FC<TagsProps> = ({ pageType, movieInfo }) => {
       <div className={Styles.tag}>{movieInfo["year"]}</div>
       <div className={Styles.tag}>{movieInfo["genre"]}</div>
       <div className={Styles.tag}>{movieInfo["country"]}</div>
-      <div className={clsx(Styles.tag, pageType === "home" && Styles.hideLastTag)}>
-        {movieInfo["ageRating"]}
-      </div>
+      <div className={clsx(Styles.tag, pageType === "home" && Styles.hideLastTag)}>{movieInfo["ageRating"]}</div>
     </div>
   );
 };

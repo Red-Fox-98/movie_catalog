@@ -96,7 +96,9 @@
 
   .contentNewMovies {
     max-width: 345px;
+    max-height: 300px;
     gap: 8px;
+    margin-left: 0;
   }
 
   .title {
@@ -106,8 +108,7 @@
   }
 
   .movie {
-    max-width: 166px;
-    max-height: 252px;
+    max-width: 168px;
     margin-right: 8px;
 
     img {

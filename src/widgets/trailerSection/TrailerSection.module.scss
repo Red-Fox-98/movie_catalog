@@ -1,3 +1,8 @@
+.content {
+  width: 960px;
+  height: 594px;
+}
+
 .trailerSection {
   position: relative;
   height: 594px;
@@ -26,8 +31,7 @@
   height: 100%;
   z-index: 0;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #09090c 100%),
-    linear-gradient(180deg, #09090c 0%, rgba(0, 0, 0, 0) 50%),
-    linear-gradient(90deg, #09090c 21.09%, rgba(0, 0, 0, 0) 50%);
+    linear-gradient(180deg, #09090c 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, #09090c 21.09%, rgba(0, 0, 0, 0) 50%);
 }
 
 .info {
@@ -76,16 +80,42 @@
 }
 
 @media (max-width: 375px) {
+  .content {
+    width: 375px;
+    height: 321px;
+    --swiper-pagination-bottom: 0;
+
+    .swiper-pagination {
+      display: none;
+    }
+
+    span {
+      --swiper-theme-color: rgba(151, 71, 255, 1);
+      --swiper-pagination-bullet-inactive-color: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.125) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      --swiper-pagination-bullet-inactive-opacity: 1;
+    }
+  }
+
+  .contentMovie {
+    width: 376px;
+    height: 620px;
+  }
+
   .trailerSection {
     position: relative;
     width: 376px;
-    height: 300px;
+    max-height: 300px;
   }
 
   .trailerSectionMovie {
     position: relative;
     width: 376px;
-    height: 620px;
+    max-height: 620px;
   }
 
   .backward {
@@ -131,7 +161,7 @@
       top: 0;
       bottom: 0;
       left: 50%;
-      transform: translateX(-61%);
+      transform: translateX(-62%);
 
       object-fit: cover;
       width: auto;

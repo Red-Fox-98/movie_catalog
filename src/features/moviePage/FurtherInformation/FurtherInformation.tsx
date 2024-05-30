@@ -35,8 +35,8 @@ const FurtherInformation: FC<FurtherInformationProps> = ({ info }) => {
       <div className={Styles.attention}>
         <Attention />
         <div className={Styles.attentionText}>
-          Контент может содержать сцены курения и употребления спиртных напитков. Курение и
-          чрезмерное употребление алкоголя вредит вашему здоровью.
+          Контент может содержать сцены курения и употребления спиртных напитков. Курение и чрезмерное употребление алкоголя
+          вредит вашему здоровью.
         </div>
       </div>
     </div>

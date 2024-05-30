@@ -47,12 +47,15 @@
   width: 293px;
   height: 320px;
 
-  background-image: url("../../../shared/uikit/images/Promo/Popcorn.png");
-
   top: 0;
   bottom: 0;
-  left: 276px;
+  left: 275px;
   z-index: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .colors {
@@ -127,12 +130,12 @@
   }
 
   .image {
-    min-width: 183px;
-    min-height: 274px;
+    width: 223px;
+    height: 232px;
+
     left: unset;
-    right: -69px;
-    top: 316px;
-    background-image: url("../../../shared/uikit/images/Promo/PopcornM.png");
+    right: 0;
+    top: 317px;
 
     img {
       height: 100%;

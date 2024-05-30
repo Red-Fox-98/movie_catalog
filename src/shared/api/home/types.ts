@@ -1,6 +1,7 @@
 import { MovieStatus } from "src/entities/homePage/MovieStatusLabel/types";
 
 export interface MovieInfo {
+  id: number;
   name: string;
   description: string;
   link: string;
@@ -13,6 +14,7 @@ export interface MovieInfo {
   ageRating: string;
   seasonsNumber?: number;
 }
+
 type videoType = "trailer" | "season";
 
 export interface VideoInformation {

@@ -12,14 +12,11 @@ interface NewMoviesProps {
 
 const NewMovies: FC<NewMoviesProps> = ({ movieInfo }) => {
   const currentWidth = typeof window !== "undefined" && window.innerWidth;
+
   return (
     <div className={Styles.listNewMovies}>
       <div className={Styles.title}>Новинки</div>
-      <Swiper
-        watchSlidesProgress={true}
-        slidesPerView={currentWidth <= 375 ? 2 : 4}
-        className={Styles.contentNewMovies}
-      >
+      <Swiper watchSlidesProgress={true} slidesPerView={currentWidth <= 375 ? 2 : 4} className={Styles.contentNewMovies}>
         {movieInfo.map((movie) => (
           <SwiperSlide key={movie.id} className={Styles.movie}>
             <Image src={movie.preview} alt={"preview"} width={216} height={324} priority />

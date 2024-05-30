@@ -15,10 +15,7 @@ const VideoContent: FC<VideoContentProps> = ({ countSeasons, videos }) => {
   const { t } = useTranslation();
   const [currentTitle, setCurrentTitle] = useState(`1 ${t("moviePage.movieTitle.season")}`);
   const headlines: string[] = countSeasons
-    ? [].concat(
-        [t("moviePage.movieTitle.trailer")],
-        getTitles(countSeasons, t("moviePage.movieTitle.season"))
-      )
+    ? [].concat([t("moviePage.movieTitle.trailer")], getTitles(countSeasons, t("moviePage.movieTitle.season")))
     : [t("moviePage.movieTitle.trailer")];
 
   const changeCurrentTitle = (title: string) => {

@@ -1,0 +1,17 @@
+.imageM {
+  display: none;
+}
+
+.image {
+  display: block;
+}
+
+@media (max-width: 375px) {
+  .image {
+    display: none;
+  }
+
+  .imageM {
+    display: block;
+  }
+}

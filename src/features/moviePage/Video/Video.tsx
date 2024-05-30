@@ -29,20 +29,14 @@ const Video: FC<VideoProps> = ({ videoBlockTitle, videos }) => {
     <div className={Styles.series} id={"series"}>
       {videos.map(
         (video) =>
-          videoTypeCheck(
-            videoBlockTitle,
-            t(`moviePage.movieTitle.${video.type}`),
-            video.season
-          ) && (
+          videoTypeCheck(videoBlockTitle, t(`moviePage.movieTitle.${video.type}`), video.season) && (
             <div key={video.id} className={Styles.video}>
               <div className={Styles.preview}>
                 <Image src={video.preview} alt={"preview"} width={325} height={198} />
                 <div className={Styles.duration}>{video.duration}</div>
               </div>
               <div className={Styles.info}>
-                {video.episode && (
-                  <div className={Styles.episodeNumber}>{`${video.episode} серия`}</div>
-                )}
+                {video.episode && <div className={Styles.episodeNumber}>{`${video.episode} серия`}</div>}
                 {video.status && <div className={Styles.statusEpisode}>{video.status}</div>}
               </div>
             </div>
