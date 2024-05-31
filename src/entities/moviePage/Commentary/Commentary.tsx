@@ -18,8 +18,10 @@ const Commentary: FC<CommentaryProps> = ({ review }) => {
   return (
     <div className={clsx(Styles.comment, isOpen && Styles.expandedText)}>
       <div className={Styles.title}>
-        <div className={Styles.name}>{review.name}</div>
-        <div className={Styles.date}>{dateCreation(review.year, review.month, review.day)}</div>
+        <div className={Styles.recallData}>
+          <div className={Styles.name}>{review.name}</div>
+          <div className={Styles.date}>{dateCreation(review.year, review.month, review.day)}</div>
+        </div>
         <div className={Styles.rating}>{review.appraisal}</div>
       </div>
       <div className={clsx(Styles.text, isOpen && Styles.expandedText)}>{review.commentary}</div>

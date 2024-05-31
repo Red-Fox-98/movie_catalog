@@ -9,7 +9,7 @@ import MoviePageContent from "src/widgets/moviePage/MoviePageContent/MoviePageCo
 const MoviePage: FC = () => {
   return (
     <div className={clsx(tTNormsPro.variable, Styles.movie)}>
-      <TrailerSection pageType={"movie"} movieInfo={MovieInfoMock} />
+      <TrailerSection pageType={"movie"} moviesInfo={MovieInfoMock} />
       <MoviePageContent />
     </div>
   );

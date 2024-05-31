@@ -1,10 +1,12 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { MovieWeek } from "src/shared/api/home/types";
 import Image from "next/image";
 import Styles from "./WeekTop.module.scss";
 import { clsx } from "clsx";
 import { drukWideCy } from "@styles/fonts";
 import { getTheNumbers } from "src/shared/uikit/numbers/Numbers";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 interface WeekTopProps {
   movies: MovieWeek[];
@@ -13,33 +15,19 @@ interface WeekTopProps {
 const WeekTop: FC<WeekTopProps> = ({ movies }) => {
   const numbers = getTheNumbers();
 
-  useEffect(() => {
-    const movies = typeof document !== "undefined" && document.getElementById("topMovies");
-
-    const onWheel = (event: WheelEvent) => {
-      event.preventDefault();
-      movies.scrollBy({
-        left: event.deltaY < 0 ? -32 : 32
-      });
-    };
-
-    movies.addEventListener("wheel", onWheel);
-    return () => movies.removeEventListener("wheel", onWheel);
-  }, []);
-
   return (
     <div className={Styles.moviesWeek}>
       <div className={clsx(drukWideCy.variable, Styles.title)}>Топ недели</div>
-      <div className={Styles.movies} id={"topMovies"}>
+      <Swiper watchSlidesProgress={true} slidesPerView={3} className={Styles.movies}>
         {movies.map((movie) => (
-          <div key={movie.id} className={Styles.movie}>
-            {numbers[movie.id].number}
-            <div className={Styles.peviewMovie}>
+          <SwiperSlide key={movie.id} className={Styles.movie}>
+            <div className={Styles.number}>{numbers[movie.id].number} </div>
+            <div className={Styles.previewMovie}>
               <Image src={movie.preview} alt={"preview"} width={246} height={370} priority />
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

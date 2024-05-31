@@ -1,22 +1,14 @@
 import { FC } from "react";
 import Style from "./PromoNotice.module.scss";
+import { clsx } from "clsx";
 
 interface PromoTagsProps {
   value: string;
-  top?: number;
-  left?: number;
-  rotation?: number;
+  className?: string;
 }
 
-const PromoNotice: FC<PromoTagsProps> = ({ value, top, left, rotation }) => {
-  return (
-    <div
-      className={Style.tag}
-      style={{ top: top, left: left, transform: `rotate(${rotation}deg)` }}
-    >
-      {value}
-    </div>
-  );
+const PromoNotice: FC<PromoTagsProps> = ({ value, className }) => {
+  return <div className={clsx(Style.tag, className)}>{value}</div>;
 };
 
 export default PromoNotice;

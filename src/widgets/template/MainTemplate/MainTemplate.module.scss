@@ -1,8 +1,16 @@
 .mainTemplate {
+  font-family: $font-main;
   background: #09090c;
   width: 960px;
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 375px) {
+  .mainTemplate {
+    max-width: 100%;
+    overflow: hidden;
+  }
 }

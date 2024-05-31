@@ -1,11 +1,4 @@
-import {
-  VideoInformation,
-  AdditionalMovieInformation,
-  MovieInfo,
-  MovieWeek,
-  NewMovieInfo,
-  IReview
-} from "./types";
+import { VideoInformation, AdditionalMovieInformation, MovieInfo, MovieWeek, NewMovieInfo, IReview } from "./types";
 
 import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
 import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
@@ -32,20 +25,68 @@ import secondSeries from "../../uikit/images/Series/second_series.png";
 import thirdSeries from "../../uikit/images/Series/third_series.png";
 import fourthSeries from "../../uikit/images/Series/fourth_series.png";
 
-export const MovieInfoMock: MovieInfo = {
-  name: "Аватар: Легенда об Аанге",
-  description:
-    "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
-  link: "avatar-legenda-ob-aange",
-  preview: previewAvatarLegendOfAang.src,
-  logo: logoAvatarLegendOfAang.src,
-  rating: "7,9",
-  year: 2024,
-  genre: "Фэнтези",
-  country: "США",
-  ageRating: "16+",
-  seasonsNumber: 4
-};
+export const MovieInfoMock: MovieInfo[] = [
+  {
+    id: 0,
+    name: "Аватар: Легенда об Аанге",
+    description:
+      "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+    link: "avatar-legenda-ob-aange",
+    preview: previewAvatarLegendOfAang.src,
+    logo: logoAvatarLegendOfAang.src,
+    rating: "7,9",
+    year: 2024,
+    genre: "Фэнтези",
+    country: "США",
+    ageRating: "16+",
+    seasonsNumber: 4
+  },
+  {
+    id: 1,
+    name: "Аватар: Легенда об Аанге",
+    description:
+      "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+    link: "avatar-legenda-ob-aange",
+    preview: previewAvatarLegendOfAang.src,
+    logo: logoAvatarLegendOfAang.src,
+    rating: "7,9",
+    year: 2024,
+    genre: "Фэнтези",
+    country: "США",
+    ageRating: "16+",
+    seasonsNumber: 4
+  },
+  {
+    id: 2,
+    name: "Аватар: Легенда об Аанге",
+    description:
+      "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+    link: "avatar-legenda-ob-aange",
+    preview: previewAvatarLegendOfAang.src,
+    logo: logoAvatarLegendOfAang.src,
+    rating: "7,9",
+    year: 2024,
+    genre: "Фэнтези",
+    country: "США",
+    ageRating: "16+",
+    seasonsNumber: 4
+  },
+  {
+    id: 3,
+    name: "Аватар: Легенда об Аанге",
+    description:
+      "Чтобы спасти мир от разрушительной войны, мальчик по имени Аанг должен справиться с четырьмя стихиями и вступить в схватку с безжалостным противником, который пытается его остановить.",
+    link: "avatar-legenda-ob-aange",
+    preview: previewAvatarLegendOfAang.src,
+    logo: logoAvatarLegendOfAang.src,
+    rating: "7,9",
+    year: 2024,
+    genre: "Фэнтези",
+    country: "США",
+    ageRating: "16+",
+    seasonsNumber: 4
+  }
+];
 
 export const VideoInformationMock: VideoInformation[] = [
   {

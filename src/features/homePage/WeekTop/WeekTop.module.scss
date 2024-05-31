@@ -1,10 +1,11 @@
 .moviesWeek {
   position: relative;
-  width: 896px;
+  width: 928px;
   height: 424px;
   display: flex;
   gap: 16px;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .title {
@@ -18,27 +19,43 @@
 
 .movies {
   position: absolute;
+  width: 1158px;
   bottom: 0;
   left: 0;
   right: -32px;
   display: flex;
   gap: 20px;
-  overflow: hidden;
+}
+
+.number {
+  width: 98px;
+  height: 124px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .movie {
   position: relative;
   height: 370px;
-  min-width: 333px;
+  max-width: 333px;
+  margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
 .movie:last-child {
   min-width: 453px;
+
+  .number {
+    width: 221px;
+    height: 128px;
+  }
 }
 
-.peviewMovie {
+.previewMovie {
   position: absolute;
   top: 0;
   right: 0;
@@ -51,5 +68,48 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 375px) {
+  .moviesWeek {
+    width: 343px;
+    min-height: 311px;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.07em;
+  }
+
+  .movies {
+    height: 270px;
+    width: 915px;
+  }
+
+  .number {
+    width: 44px;
+    height: 55px;
+  }
+
+  .movie {
+    max-width: 224px;
+    height: 270px;
+  }
+
+  .movie:last-child {
+    min-width: 277px;
+
+    .number {
+      width: 98px;
+      height: 57px;
+    }
+  }
+
+  .previewMovie {
+    width: 180px;
+    height: 270px;
   }
 }

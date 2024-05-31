@@ -1,27 +1,16 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Styles from "./Review.module.scss";
 import RightArrow from "src/shared/uikit/icons/RightArrow";
 import Commentary from "src/entities/moviePage/Commentary/Commentary";
 import { IReview } from "src/shared/api/home/types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 interface ReviewProps {
   reviews: IReview[];
 }
 
 const Review: FC<ReviewProps> = ({ reviews }) => {
-  useEffect(() => {
-    const movies = typeof document !== "undefined" && document.getElementById("comments");
-    const onWheel = (event: WheelEvent) => {
-      event.preventDefault();
-      movies.scrollBy({
-        left: event.deltaY < 0 ? -32 : 32
-      });
-    };
-
-    movies.addEventListener("wheel", onWheel);
-    return () => movies.removeEventListener("wheel", onWheel);
-  }, []);
-
   return (
     <div className={Styles.content}>
       <div className={Styles.headlines}>
@@ -37,11 +26,13 @@ const Review: FC<ReviewProps> = ({ reviews }) => {
         </div>
       </div>
 
-      <div className={Styles.comments} id={"comments"}>
+      <Swiper watchSlidesProgress={true} slidesPerView={2} className={Styles.comments}>
         {reviews.map((review) => (
-          <Commentary key={review.id} review={review} />
+          <SwiperSlide key={review.id} className={Styles.comment}>
+            <Commentary key={review.id} review={review} />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

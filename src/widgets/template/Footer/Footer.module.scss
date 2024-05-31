@@ -1,9 +1,32 @@
-.footer {
+.content {
   height: 429px;
   padding: 52px 32px 44px;
   display: flex;
   flex-direction: column;
   gap: 44px;
+}
+
+.footer,
+.upperFooter,
+.bottomFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.promocodeBtn {
+  display: none;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.48px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .socialMediaForm {
@@ -21,7 +44,6 @@
   padding: 10px 16px;
   background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 19.17px;
@@ -38,7 +60,6 @@
     display: flex;
     align-items: center;
     gap: 4px;
-
     color: rgba(186, 186, 186, 1);
     font-size: 16px;
     font-weight: 500;
@@ -77,16 +98,13 @@
   background: none;
   border: 0;
   cursor: pointer;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 19.17px;
-  text-align: left;
 }
 
 .aboutForm {
   height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,11 +113,10 @@
 .about {
   width: 237px;
   height: 38px;
-
+  white-space: pre-wrap;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.17px;
-  text-align: left;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -108,6 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   svg {
     fill: rgba(255, 255, 255, 0.3);
   }
@@ -116,4 +134,137 @@
 .btn {
   width: 237px;
   height: 46px;
+}
+
+.probeBtn {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .content {
+    max-width: 375px;
+    height: auto;
+    padding: 28px 16px;
+    gap: 0;
+  }
+
+  .footer {
+    max-width: 343px;
+    height: 639px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .upperFooter {
+    position: relative;
+    max-width: 343px;
+    height: 480px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promocodeBtn {
+    display: flex;
+  }
+
+  .supportButton {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .socialMediaForm {
+    width: 105px;
+    height: 108px;
+  }
+
+  .socialNetworks {
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      gap: 2px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .socialNetworks {
+    height: 108px;
+    width: 105px;
+    flex-direction: column;
+  }
+
+  .linkForm {
+    height: 100%;
+    border: none;
+  }
+
+  .buttonLink {
+    height: 32px;
+    padding: 8px 0;
+  }
+
+  .buttonLinks {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bottomFooter {
+    position: relative;
+    max-width: 343px;
+    height: 115px;
+    padding-top: 40px;
+    border-top: solid 1px rgba(255, 255, 255, 1);
+  }
+
+  .aboutForm {
+    position: relative;
+
+    max-width: 343px;
+    height: 115px;
+    flex-direction: column;
+  }
+
+  .about {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -24px;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 92px;
+    height: 33px;
+    display: flex;
+    gap: 12px;
+
+    svg {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .probeBtn {
+    max-width: 343px;
+    height: 48px;
+    display: block;
+    margin-bottom: 10px;
+
+    button {
+      width: 100%;
+    }
+  }
 }
