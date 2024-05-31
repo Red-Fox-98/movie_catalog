@@ -1,13 +1,15 @@
 .series {
+  max-width: 1360px;
   display: flex;
   gap: 20px;
   overflow: hidden;
 }
 
 .video {
-  width: 325px;
+  max-width: 325px;
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
   gap: 8px;
 }
 
@@ -59,4 +61,54 @@
   font-weight: 400;
   line-height: 20.48px;
   color: rgba(186, 186, 186, 1);
+}
+
+@media (max-width: 375px) {
+  .series {
+    min-width: 1400px;
+  }
+
+  .video {
+    max-width: 200px;
+    height: 162px;
+    margin-right: 8px;
+  }
+
+  .preview {
+    width: 200px;
+    height: 120px;
+  }
+
+  .info {
+    gap: 2px;
+  }
+
+  .episodeNumber {
+    width: 200px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.92px;
+  }
+
+  .statusEpisode {
+    width: 200px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.92px;
+  }
+
+  .duration {
+    width: 52px;
+    height: 26px;
+    top: 86px;
+    left: 140px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

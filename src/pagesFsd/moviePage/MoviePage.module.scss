@@ -5,3 +5,9 @@
   align-items: center;
   gap: 64px;
 }
+
+@media (max-width: 375px) {
+  .movie {
+    gap: 26px;
+  }
+}

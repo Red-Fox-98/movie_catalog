@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MovieInfo } from "src/shared/api/home/types";
 import TrailerSectionTags from "src/entities/TrailerSectionTags/TrailerSectionTags";
 import { useTranslation } from "react-i18next";
-import { getSizeBtn, getWidthWindow, hideSwiper } from "src/widgets/trailerSection/helpers";
+import { getSizeBtn, getWidthWindow, hideSwiper } from "./helpers";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
