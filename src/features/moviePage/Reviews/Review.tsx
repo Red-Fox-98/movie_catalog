@@ -16,6 +16,7 @@ const Review: FC<ReviewProps> = ({ reviews }) => {
       <div className={Styles.headlines}>
         <div className={Styles.reviewTvoe}>
           {"Рейтинг TVOЁ 8.4"}
+          {/*Рейтинг тоже нужно передавать в пропсах*/}
           <button className={Styles.createReviewBtn}>{"Поставить оценку"}</button>
         </div>
         <div className={Styles.sectiondTitle}>

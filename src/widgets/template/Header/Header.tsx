@@ -10,6 +10,7 @@ import Bell from "src/shared/uikit/icons/Bell";
 const Header: FC = () => {
   return (
     <div className={Styles.header}>
+      {/*Сделай логотип кликабельным. Чтобы он вел на главную страницу*/}
       <div className={Styles.logo}>
         <Logo />
         <Name />

@@ -51,6 +51,7 @@ const TrailerSection: FC<TrailerSectionProps> = ({ pageType, moviesInfo }) => {
           key={movieInfo.id}
           className={clsx(Styles.trailerSection, pageType === "movie" && Styles.trailerSectionMovie)}
         >
+          {/*Я бы вынес карточку фильма в отдельный компонент*/}
           {pageType === "movie" && (
             <button className={Styles.backward} onClick={() => window.location.assign("http://localhost:3000")}>
               <div className={Styles.leftArrow}>
@@ -59,6 +60,7 @@ const TrailerSection: FC<TrailerSectionProps> = ({ pageType, moviesInfo }) => {
               {"Назад"}
             </button>
           )}
+          {/*Не надо делать фон кликабельным. У тебя же есть кнопка "смотреть"*/}
           <div
             className={clsx(Styles.preview, currentLink.pathname === "/" ? Styles.preview : Styles.previewMovie)}
             onClick={() => window.location.assign(` http://localhost:3000/${movieInfo.link}`)}
@@ -66,6 +68,8 @@ const TrailerSection: FC<TrailerSectionProps> = ({ pageType, moviesInfo }) => {
             <Image src={movieInfo["preview"]} alt={"preview"} width={1231} height={692} priority />
           </div>
           <div className={Styles.info}>
+            {/* Ты много раз используешь currentLink.pathname === "/" Может вынести в переменную? */}
+            {/* И вообще зачем это? У тебя же есть pageType */}
             <div className={clsx(currentLink.pathname === "/" ? Styles.logo : Styles.logoMovie)}>
               <Image src={movieInfo["logo"]} alt={"logo"} width={338} height={101} />
             </div>

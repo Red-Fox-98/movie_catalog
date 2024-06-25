@@ -21,6 +21,7 @@ const WeekTop: FC<WeekTopProps> = ({ movies }) => {
       <Swiper watchSlidesProgress={true} slidesPerView={3} className={Styles.movies}>
         {movies.map((movie) => (
           <SwiperSlide key={movie.id} className={Styles.movie}>
+            {/*точно ли numbers[movie.id] ? может лучше numbers[index + 1] */}
             <div className={Styles.number}>{numbers[movie.id].number} </div>
             <div className={Styles.previewMovie}>
               <Image src={movie.preview} alt={"preview"} width={246} height={370} priority />

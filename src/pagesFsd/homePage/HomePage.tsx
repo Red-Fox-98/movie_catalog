@@ -8,6 +8,7 @@ import HomepageContent from "src/widgets/homePage/HomepageContent/HomepageConten
 const HomePage: FC = () => {
   return (
     <div className={Styles.home}>
+      {/*Свайпер не свайпается*/}
       <TrailerSection pageType={"home"} moviesInfo={MovieInfoMock} />
       <HomepageContent />
     </div>

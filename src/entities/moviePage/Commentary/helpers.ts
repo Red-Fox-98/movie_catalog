@@ -14,5 +14,5 @@ export const dateCreation = (year: number, month: number, day: number) => {
     "декабря"
   ];
 
-  return `${day} ${months[month - 1]} ${year}`;
+  return `${day} ${months[month - 1]} ${year}`; // Замени это на toLocalDateString и подредактируй
 };
