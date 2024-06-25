@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 interface VideoProps {
-  videoBlockTitle: string;
+  videoBlockTitle: string; // Опять же - завязываться на заголовке - не лучшая идея. Лучше на номере сезона
   videos: VideoInformation[];
 }
 
@@ -18,6 +18,8 @@ const Video: FC<VideoProps> = ({ videoBlockTitle, videos }) => {
   return (
     <Swiper watchSlidesProgress={true} slidesPerView={3} className={Styles.series}>
       {videos.map(
+        // Лучше сверху подготовить отфильтрованный массив видео (через useMemo)
+        // и потом уже его отображать через map без всяких проверок
         (video) =>
           videoTypeCheck(videoBlockTitle, t(`moviePage.movieTitle.${video.type}`), video.season) && (
             <SwiperSlide key={video.id} className={Styles.video}>

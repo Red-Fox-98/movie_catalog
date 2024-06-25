@@ -12,11 +12,13 @@ interface FurtherInformationProps {
 }
 
 const FurtherInformation: FC<FurtherInformationProps> = ({ info }) => {
-  const currentWidth = typeof window !== "undefined" && window.innerWidth;
-  const [currentTitleInfo, setCurrentTitleInfo] = useState("description");
-  const InformationTitle = ["description", "filmCrew", "information"];
   const { t } = useTranslation();
 
+  const currentWidth = typeof window !== "undefined" && window.innerWidth;
+
+  // Преврати это все в enum или union type. Потому, что в данный момент можно впихнуть все что угодно в функцию по смене категории
+  const InformationTitle = ["description", "filmCrew", "information"];
+  const [currentTitleInfo, setCurrentTitleInfo] = useState("description");
   const changeInformation = (title: string) => {
     setCurrentTitleInfo(title);
   };

@@ -11,9 +11,7 @@ interface CommentaryProps {
 const Commentary: FC<CommentaryProps> = ({ review }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const textStateChange = (isOpen: boolean) => {
-    setIsOpen(!isOpen);
-  };
+  const toggleOpen = () => setIsOpen((prev) => !prev);
 
   return (
     <div className={clsx(Styles.comment, isOpen && Styles.expandedText)}>
@@ -26,7 +24,7 @@ const Commentary: FC<CommentaryProps> = ({ review }) => {
       </div>
       <div className={clsx(Styles.text, isOpen && Styles.expandedText)}>{review.commentary}</div>
 
-      <button className={Styles.commentBtn} onClick={() => textStateChange(isOpen)}>
+      <button className={Styles.commentBtn} onClick={toggleOpen}>
         {isOpen ? "Свернуть" : "Читать дальше"}
       </button>
     </div>
