@@ -34,7 +34,7 @@ export const MovieInfoMock: MovieInfo[] = [
     link: "avatar-legenda-ob-aange",
     preview: previewAvatarLegendOfAang.src,
     logo: logoAvatarLegendOfAang.src,
-    rating: "7,9",
+    rating: "7,9", // Почему не число?
     year: 2024,
     genre: "Фэнтези",
     country: "США",
@@ -96,7 +96,7 @@ export const VideoInformationMock: VideoInformation[] = [
     episode: 1,
     preview: firstSeries.src,
     duration: "43:54",
-    status: "Просмотрено"
+    status: "Просмотрено" // Почему не enum?
   },
   {
     id: 1,
@@ -113,7 +113,7 @@ export const VideoInformationMock: VideoInformation[] = [
     season: 1,
     episode: 3,
     preview: thirdSeries.src,
-    duration: "43:54",
+    duration: "43:54", // я думаю, что длительность лучше сделать как в NewMoviesInfoMock
     status: "Просмотрено"
   },
   {
@@ -169,7 +169,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 0,
     preview: previewManOnALedge.src,
-    rating: "8,9",
+    rating: "8,9", // Аналогично, почему не число?
     name: "На грани",
     year: 2022,
     numberOfHours: 2,

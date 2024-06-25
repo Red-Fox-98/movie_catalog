@@ -16,6 +16,8 @@ const NewMovies: FC<NewMoviesProps> = ({ movieInfo }) => {
   return (
     <div className={Styles.listNewMovies}>
       <div className={Styles.title}>Новинки</div>
+      {/* Ты число 375 очень часто используешь. Я бы вынес его в виде переменной и использовал потом ее везде. */}
+      {/* В CSS тоже можно сделать переменную через $var: 375px */}
       <Swiper watchSlidesProgress={true} slidesPerView={currentWidth <= 375 ? 2 : 4} className={Styles.contentNewMovies}>
         {movieInfo.map((movie) => (
           <SwiperSlide key={movie.id} className={Styles.movie}>

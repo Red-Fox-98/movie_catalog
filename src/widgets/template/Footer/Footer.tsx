@@ -25,6 +25,8 @@ const Footer: FC = () => {
           <div className={Styles.socialMediaForm}>
             <button className={Styles.supportButton}>Написать в поддержку</button>
             <div className={Styles.socialNetworks}>
+              {/*Может вынести в отдельный компонент?*/}
+              {/* <SocialButton name={"Youtube"} href={'#'} icon={<YT />} /> */}
               <a href='#'>
                 Youtube
                 <div className={Styles.socialIcon}>
