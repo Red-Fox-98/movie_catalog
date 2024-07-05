@@ -16,6 +16,7 @@ export interface MovieInfo {
 }
 
 type videoType = "trailer" | "season";
+type statusType = "reviewed" | "notViewed";
 
 export interface VideoInformation {
   id: number;
@@ -23,8 +24,9 @@ export interface VideoInformation {
   season?: number;
   episode?: number;
   preview: string;
-  duration: string;
-  status?: string;
+  numberOfMinutes: number;
+  numberOfSeconds: number;
+  status?: statusType;
 }
 
 export interface AdditionalMovieInformation {

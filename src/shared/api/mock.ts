@@ -95,8 +95,9 @@ export const VideoInformationMock: VideoInformation[] = [
     season: 1,
     episode: 1,
     preview: firstSeries.src,
-    duration: "43:54",
-    status: "Просмотрено" // Почему не enum?
+    numberOfMinutes: 43,
+    numberOfSeconds: 54,
+    status: "reviewed"
   },
   {
     id: 1,
@@ -104,8 +105,9 @@ export const VideoInformationMock: VideoInformation[] = [
     season: 1,
     episode: 2,
     preview: secondSeries.src,
-    duration: "43:54",
-    status: "Просмотрено"
+    numberOfMinutes: 43,
+    numberOfSeconds: 54,
+    status: "reviewed"
   },
   {
     id: 2,
@@ -113,8 +115,9 @@ export const VideoInformationMock: VideoInformation[] = [
     season: 1,
     episode: 3,
     preview: thirdSeries.src,
-    duration: "43:54", // я думаю, что длительность лучше сделать как в NewMoviesInfoMock
-    status: "Просмотрено"
+    numberOfMinutes: 43,
+    numberOfSeconds: 54,
+    status: "reviewed"
   },
   {
     id: 3,
@@ -122,8 +125,9 @@ export const VideoInformationMock: VideoInformation[] = [
     season: 1,
     episode: 4,
     preview: fourthSeries.src,
-    duration: "43:54",
-    status: "Просмотрено"
+    numberOfMinutes: 43,
+    numberOfSeconds: 54,
+    status: "reviewed"
   }
 ];
 
@@ -169,7 +173,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 0,
     preview: previewManOnALedge.src,
-    rating: 8.9, // Аналогично, почему не число?
+    rating: 8.9,
     name: "На грани",
     year: 2022,
     numberOfHours: 2,

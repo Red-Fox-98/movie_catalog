@@ -22,6 +22,10 @@
       "trailer": "Трейлер",
       "season": "сезон",
       "series": "серия"
+    },
+    "movieStatus": {
+      "reviewed": "Посмотрено",
+      "notViewed": "Не посмотрено"
     }
   }
 }

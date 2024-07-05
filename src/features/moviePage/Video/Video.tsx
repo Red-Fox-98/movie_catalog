@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 interface VideoProps {
-  sectionNumber: number; // Опять же - завязываться на заголовке - не лучшая идея. Лучше на номере сезона
+  sectionNumber: number;
   videos: VideoInformation[];
 }
 
@@ -22,13 +22,13 @@ const Video: FC<VideoProps> = ({ sectionNumber, videos }) => {
         <SwiperSlide key={video.id} className={Styles.video}>
           <div className={Styles.preview}>
             <Image src={video.preview} alt={"preview"} width={325} height={198} />
-            <div className={Styles.duration}>{video.duration}</div>
+            <div className={Styles.duration}>{`${video.numberOfMinutes}:${video.numberOfSeconds}`}</div>
           </div>
           <div className={Styles.info}>
             {video.episode && (
               <div className={Styles.episodeNumber}>{`${video.episode} ${t("moviePage.movieTitle.series")}`}</div>
             )}
-            {video.status && <div className={Styles.statusEpisode}>{video.status}</div>}
+            {video.status && <div className={Styles.statusEpisode}>{t(`moviePage.movieStatus.${video.status}`)}</div>}
           </div>
         </SwiperSlide>
       ))}
