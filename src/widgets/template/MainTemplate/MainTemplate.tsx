@@ -11,7 +11,7 @@ interface MainTemplateProps {
 
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   return (
-    <div className={clsx(tTNormsPro.variable, Styles.mainTemplate)}>
+    <div className={clsx(tTNormsPro.variable, Styles.content)}>
       <Header />
       <main>{children}</main>
       <Footer />

@@ -1,11 +1,14 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import Styles from "./FurtherInformation.module.scss";
-import { AdditionalMovieInformation } from "src/shared/api/home/types";
+import { AdditionalMovieInformation } from "src/shared/api/types";
 import { useTranslation } from "react-i18next";
 import Attention from "src/shared/uikit/icons/Attention";
 import { clsx } from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { widthMobile } from "@styles/values";
+
+type TitlesType = "description" | "filmCrew" | "information";
 
 interface FurtherInformationProps {
   info: AdditionalMovieInformation;
@@ -13,26 +16,28 @@ interface FurtherInformationProps {
 
 const FurtherInformation: FC<FurtherInformationProps> = ({ info }) => {
   const { t } = useTranslation();
-
-  const currentWidth = typeof window !== "undefined" && window.innerWidth;
-
-  // Преврати это все в enum или union type. Потому, что в данный момент можно впихнуть все что угодно в функцию по смене категории
-  const InformationTitle = ["description", "filmCrew", "information"];
+  const InformationTitle: TitlesType[] = ["description", "filmCrew", "information"];
   const [currentTitleInfo, setCurrentTitleInfo] = useState("description");
+  const [widthWindow, setWidthWindow] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
+
+  useEffect(() => {
+    setWidthWindow(typeof window !== "undefined" ? window.innerWidth : 0);
+  }, []);
+
   const changeInformation = (title: string) => {
     setCurrentTitleInfo(title);
   };
 
   return (
     <div className={Styles.content}>
-      <Swiper watchSlidesProgress={true} slidesPerView={currentWidth <= 375 ? 2 : 3} className={Styles.headlines}>
+      <Swiper watchSlidesProgress={true} slidesPerView={widthWindow <= widthMobile ? 2 : 3} className={Styles.headlines}>
         {InformationTitle.map((title) => (
           <SwiperSlide key={title} className={clsx(Styles.titleBtn, title === currentTitleInfo && Styles.activeTitleBtn)}>
             <button onClick={() => changeInformation(title)}>{t(`moviePage.informationTitle.${title}`)}</button>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={Styles.text}>{info[currentTitleInfo]}</div>
+      <div className={Styles.text}>{info[currentTitleInfo as keyof typeof info]}</div>
       <div className={Styles.attention}>
         <div className={Styles.icon}>
           <Attention />

@@ -52,12 +52,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 11px 11px 8px;
-
-  svg {
-    width: 9.49px;
-    height: 15.22px;
-  }
 }
 
 .comments {
@@ -71,7 +65,7 @@
   width: auto !important;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .content {
     width: 343px;
     height: auto;

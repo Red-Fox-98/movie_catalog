@@ -1,29 +1,29 @@
 import { VideoInformation, AdditionalMovieInformation, MovieInfo, MovieWeek, NewMovieInfo, IReview } from "./types";
 
-import previewAvatarLegendOfAang from "../../api/home/moviePreviews/AvatarLegendOfAang.png";
-import logoAvatarLegendOfAang from "../../api/home/infoFilm/LogoAvatarLegendOfAang.png";
+import previewAvatarLegendOfAang from "./home/moviePreviews/AvatarLegendOfAang.png";
+import logoAvatarLegendOfAang from "./home/infoFilm/LogoAvatarLegendOfAang.png";
 
-import previewManOnALedge from "../../api/home/newMoviesPreviews/ManOnALedge.png";
-import previewOceanSEight from "../../api/home/newMoviesPreviews/OceanSEight.png";
-import previewNancyDrew from "../../api/home/newMoviesPreviews/NancyDrew.png";
-import previewNoChangeOnTheWesternFront from "../../api/home/newMoviesPreviews/NoChangeOnTheWesternFront.png";
-import previewAvatarWaterway from "../../api/home/newMoviesPreviews/AvatarWaterway.png";
+import previewManOnALedge from "./home/newMoviesPreviews/ManOnALedge.png";
+import previewOceanSEight from "./home/newMoviesPreviews/OceanSEight.png";
+import previewNancyDrew from "./home/newMoviesPreviews/NancyDrew.png";
+import previewNoChangeOnTheWesternFront from "./home/newMoviesPreviews/NoChangeOnTheWesternFront.png";
+import previewAvatarWaterway from "./home/newMoviesPreviews/AvatarWaterway.png";
 
-import topOne from "../../api/home/weekTop/1.png";
-import topTwo from "../../api/home/weekTop/2.png";
-import topThree from "../../api/home/weekTop/3.png";
-import topFour from "../../api/home/weekTop/4.png";
-import topFive from "../../api/home/weekTop/5.png";
-import topSix from "../../api/home/weekTop/6.png";
-import topSeven from "../../api/home/weekTop/7.png";
-import topEight from "../../api/home/weekTop/8.png";
-import topNine from "../../api/home/weekTop/9.png";
-import topTen from "../../api/home/weekTop/10.png";
+import topOne from "./home/weekTop/1.png";
+import topTwo from "./home/weekTop/2.png";
+import topThree from "./home/weekTop/3.png";
+import topFour from "./home/weekTop/4.png";
+import topFive from "./home/weekTop/5.png";
+import topSix from "./home/weekTop/6.png";
+import topSeven from "./home/weekTop/7.png";
+import topEight from "./home/weekTop/8.png";
+import topNine from "./home/weekTop/9.png";
+import topTen from "./home/weekTop/10.png";
 
-import firstSeries from "../../uikit/images/Series/first_series.png";
-import secondSeries from "../../uikit/images/Series/second_series.png";
-import thirdSeries from "../../uikit/images/Series/third_series.png";
-import fourthSeries from "../../uikit/images/Series/fourth_series.png";
+import firstSeries from "../uikit/images/Series/first_series.png";
+import secondSeries from "../uikit/images/Series/second_series.png";
+import thirdSeries from "../uikit/images/Series/third_series.png";
+import fourthSeries from "../uikit/images/Series/fourth_series.png";
 
 export const MovieInfoMock: MovieInfo[] = [
   {
@@ -34,12 +34,12 @@ export const MovieInfoMock: MovieInfo[] = [
     link: "avatar-legenda-ob-aange",
     preview: previewAvatarLegendOfAang.src,
     logo: logoAvatarLegendOfAang.src,
-    rating: "7,9", // Почему не число?
+    rating: 7.9,
     year: 2024,
     genre: "Фэнтези",
     country: "США",
     ageRating: "16+",
-    seasonsNumber: 4
+    countSeasons: 4
   },
   {
     id: 1,
@@ -49,12 +49,12 @@ export const MovieInfoMock: MovieInfo[] = [
     link: "avatar-legenda-ob-aange",
     preview: previewAvatarLegendOfAang.src,
     logo: logoAvatarLegendOfAang.src,
-    rating: "7,9",
+    rating: 7.9,
     year: 2024,
     genre: "Фэнтези",
     country: "США",
     ageRating: "16+",
-    seasonsNumber: 4
+    countSeasons: 4
   },
   {
     id: 2,
@@ -64,12 +64,12 @@ export const MovieInfoMock: MovieInfo[] = [
     link: "avatar-legenda-ob-aange",
     preview: previewAvatarLegendOfAang.src,
     logo: logoAvatarLegendOfAang.src,
-    rating: "7,9",
+    rating: 7.9,
     year: 2024,
     genre: "Фэнтези",
     country: "США",
     ageRating: "16+",
-    seasonsNumber: 4
+    countSeasons: 4
   },
   {
     id: 3,
@@ -79,12 +79,12 @@ export const MovieInfoMock: MovieInfo[] = [
     link: "avatar-legenda-ob-aange",
     preview: previewAvatarLegendOfAang.src,
     logo: logoAvatarLegendOfAang.src,
-    rating: "7,9",
+    rating: 7.9,
     year: 2024,
     genre: "Фэнтези",
     country: "США",
     ageRating: "16+",
-    seasonsNumber: 4
+    countSeasons: 4
   }
 ];
 
@@ -169,7 +169,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 0,
     preview: previewManOnALedge.src,
-    rating: "8,9", // Аналогично, почему не число?
+    rating: 8.9, // Аналогично, почему не число?
     name: "На грани",
     year: 2022,
     numberOfHours: 2,
@@ -178,7 +178,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 1,
     preview: previewOceanSEight.src,
-    rating: "8,2",
+    rating: 8.2,
     name: "8 подруг Оушена",
     year: 2022,
     numberOfHours: 2,
@@ -187,7 +187,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 2,
     preview: previewNancyDrew.src,
-    rating: "9,0",
+    rating: 9.0,
     status: "newSeason",
     name: "Нэнси Дрю",
     year: 2022,
@@ -197,7 +197,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 3,
     preview: previewNoChangeOnTheWesternFront.src,
-    rating: "7,9",
+    rating: 7.9,
     status: "premiere",
     name: "На западном фронте без перемен",
     year: 2022,
@@ -207,7 +207,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 4,
     preview: previewAvatarWaterway.src,
-    rating: "9,9",
+    rating: 9.9,
     status: "premiere",
     name: "Аватар. Путь воды",
     year: 2022,
@@ -217,7 +217,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   {
     id: 5,
     preview: previewAvatarWaterway.src,
-    rating: "9,9",
+    rating: 9.9,
     status: "premiere",
     name: "Аватар. Путь воды",
     year: 2022,
@@ -226,7 +226,7 @@ export const NewMoviesInfoMock: NewMovieInfo[] = [
   }
 ];
 
-export const moviesWeekMock: MovieWeek[] = [
+export const MoviesWeekMock: MovieWeek[] = [
   {
     id: 0,
     preview: topOne.src

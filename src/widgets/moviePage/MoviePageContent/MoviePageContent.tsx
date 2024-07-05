@@ -1,16 +1,20 @@
 import { FC } from "react";
 import Styles from "./MoviePageContent.module.scss";
 import VideoContent from "src/features/moviePage/VideoContent/VideoContent";
-import { AdditionalMovieInformationMock, MovieInfoMock, ReviewsMock, VideoInformationMock } from "src/shared/api/home/mock";
 import FurtherInformation from "src/features/moviePage/FurtherInformation/FurtherInformation";
-import Review from "src/features/moviePage/Reviews/Review";
+import Review from "src/features/moviePage/Review/Review";
+import { MoviePageData } from "src/widgets/moviePage/MoviePageContent/types";
 
-const MoviePageContent: FC = () => {
+interface MoviePageContentProps {
+  data: MoviePageData;
+}
+
+const MoviePageContent: FC<MoviePageContentProps> = ({ data }) => {
   return (
     <div className={Styles.content}>
-      <VideoContent countSeasons={MovieInfoMock[0].seasonsNumber} videos={VideoInformationMock} />
-      <FurtherInformation info={AdditionalMovieInformationMock} />
-      <Review reviews={ReviewsMock} />
+      <VideoContent countSeasons={data.countSeasons} videos={data.videos} />
+      <FurtherInformation info={data.infoMovie} />
+      <Review reviews={data.review} rating={data.ratingMovie} />
     </div>
   );
 };

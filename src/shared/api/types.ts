@@ -7,12 +7,12 @@ export interface MovieInfo {
   link: string;
   preview: string;
   logo: string;
-  rating: string;
+  rating: number;
   year: number;
   genre: string;
   country: string;
   ageRating: string;
-  seasonsNumber?: number;
+  countSeasons: number;
 }
 
 type videoType = "trailer" | "season";
@@ -44,7 +44,7 @@ export interface IReview {
 export interface NewMovieInfo {
   id: number;
   preview: string;
-  rating: string;
+  rating: number;
   status?: MovieStatus;
   name: string;
   year: number;

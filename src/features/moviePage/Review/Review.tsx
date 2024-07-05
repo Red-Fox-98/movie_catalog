@@ -1,22 +1,22 @@
 import { FC } from "react";
 import Styles from "./Review.module.scss";
-import RightArrow from "src/shared/uikit/icons/RightArrow";
 import Commentary from "src/entities/moviePage/Commentary/Commentary";
-import { IReview } from "src/shared/api/home/types";
+import { IReview } from "src/shared/api/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import RightArrow from "src/shared/uikit/icons/RightArrow";
 
 interface ReviewProps {
   reviews: IReview[];
+  rating: number;
 }
 
-const Review: FC<ReviewProps> = ({ reviews }) => {
+const Review: FC<ReviewProps> = ({ reviews, rating }) => {
   return (
     <div className={Styles.content}>
       <div className={Styles.headlines}>
         <div className={Styles.reviewTvoe}>
-          {"Рейтинг TVOЁ 8.4"}
-          {/*Рейтинг тоже нужно передавать в пропсах*/}
+          {`Рейтинг TVOЁ ${rating.toLocaleString("ru", { minimumFractionDigits: 1 })}`}
           <button className={Styles.createReviewBtn}>{"Поставить оценку"}</button>
         </div>
         <div className={Styles.sectiondTitle}>

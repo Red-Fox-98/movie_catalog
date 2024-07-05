@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import Styles from "./Commentary.module.scss";
-import { IReview } from "src/shared/api/home/types";
+import { IReview } from "src/shared/api/types";
 import { dateCreation } from "src/entities/moviePage/Commentary/helpers";
 import { clsx } from "clsx";
 

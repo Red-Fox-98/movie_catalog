@@ -7,10 +7,10 @@ import YT from "../../../shared/uikit/icons/YT";
 import VK from "../../../shared/uikit/icons/VK";
 import TG from "../../../shared/uikit/icons/TG";
 import Logo from "../../../shared/uikit/icons/Logo";
-import Name from "../../../shared/uikit/icons/Name";
 import Button from "src/shared/uikit/Button/Button";
 import Gift from "src/shared/uikit/icons/Gift";
 import { useRouter } from "next/router";
+import SocialButton from "src/features/template/SocialButton/SocialButton";
 
 const Footer: FC = () => {
   const currentLink = useRouter();
@@ -25,26 +25,9 @@ const Footer: FC = () => {
           <div className={Styles.socialMediaForm}>
             <button className={Styles.supportButton}>Написать в поддержку</button>
             <div className={Styles.socialNetworks}>
-              {/*Может вынести в отдельный компонент?*/}
-              {/* <SocialButton name={"Youtube"} href={'#'} icon={<YT />} /> */}
-              <a href='#'>
-                Youtube
-                <div className={Styles.socialIcon}>
-                  <YT />
-                </div>
-              </a>
-              <a href='#'>
-                ВКонтакте
-                <div className={Styles.socialIcon}>
-                  <VK />
-                </div>
-              </a>
-              <a href='#'>
-                Telegram
-                <div className={Styles.socialIcon}>
-                  <TG />
-                </div>
-              </a>
+              <SocialButton name={"Youtube"} href={"#"} icon={<YT />} />
+              <SocialButton name={"ВКонтакте"} href={"#"} icon={<VK />} />
+              <SocialButton name={"Telegram"} href={"#"} icon={<TG />} />
             </div>
           </div>
           <div className={Styles.linkForm}>
@@ -61,10 +44,9 @@ const Footer: FC = () => {
         <div className={Styles.bottomFooter}>
           <div className={Styles.aboutForm}>
             <div className={Styles.about}>{"2023, ООО «ТВОЁ ЛАЙВ» 18+\n ИНН  7720904034 "}</div>
-            <div className={Styles.logo}>
+            <a href={"http://localhost:3000"} className={Styles.logo}>
               <Logo />
-              <Name />
-            </div>
+            </a>
             <div className={Styles.btn}></div>
           </div>
         </div>

@@ -69,16 +69,6 @@
   }
 }
 
-.socialIcon {
-  height: 24px;
-  width: 24px;
-
-  svg {
-    fill: white;
-    fill-opacity: 0.3;
-  }
-}
-
 .linkForm {
   height: 51px;
   display: flex;
@@ -140,7 +130,7 @@
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .content {
     max-width: 375px;
     height: auto;

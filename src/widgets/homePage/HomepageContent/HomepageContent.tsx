@@ -2,18 +2,20 @@ import { FC } from "react";
 import Styles from "./HomepageContent.module.scss";
 import NewMovies from "../../../features/homePage/NewMovies/NewMovies";
 
-import { moviesWeekMock, NewMoviesInfoMock } from "src/shared/api/home/mock";
 import Promo from "src/features/homePage/Promo/Promo";
 import WeekTop from "src/features/homePage/WeekTop/WeekTop";
+import { HomepageData } from "src/widgets/homePage/HomepageContent/types";
 
-const HomepageContent: FC = () => {
+interface HomepageContentProps {
+  data: HomepageData;
+}
+
+const HomepageContent: FC<HomepageContentProps> = ({ data }) => {
   return (
     <div className={Styles.content}>
-      {/* У тебя данные должны приходить из пропсов. */}
-      {/* В теории ты на HomePage делаешь запрос, получаешь данные и уже через пропсы прокидываешь*/}
-      <NewMovies movieInfo={NewMoviesInfoMock} />
+      <NewMovies movieInfo={data.movies} />
       <Promo />
-      <WeekTop movies={moviesWeekMock} />
+      <WeekTop movies={data.weakTop} />
     </div>
   );
 };

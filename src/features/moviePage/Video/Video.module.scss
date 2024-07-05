@@ -1,5 +1,5 @@
 .series {
-  max-width: 1360px;
+  width: 1360px;
   display: flex;
   gap: 20px;
   overflow: hidden;
@@ -63,7 +63,7 @@
   color: rgba(186, 186, 186, 1);
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .series {
     min-width: 1400px;
   }

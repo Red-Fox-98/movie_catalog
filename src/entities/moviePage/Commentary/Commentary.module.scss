@@ -81,7 +81,7 @@
   max-height: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .comment {
     width: 305px;
     padding: 16px;
