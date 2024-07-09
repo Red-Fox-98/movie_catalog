@@ -10,31 +10,33 @@ import TrailerSectionTags from "src/entities/trailerSectionTags/TrailerSectionTa
 import { useTranslation } from "react-i18next";
 import { getSizeBtn } from "./helpers";
 import Button, { SizeType } from "src/shared/uikit/Button/Button";
+import { domain } from "@styles/values";
 
 /*icons*/
 import Marker from "src/shared/uikit/icons/Marker";
 import Heart from "src/shared/uikit/icons/Heart";
 import Share from "src/shared/uikit/icons/Share";
+import { useMaineTemplateContext } from "src/widgets/template/MainTemplate/MainTemplate";
 
 interface TrailerSectionMovieProps {
   pageType: TrailerSectionType;
   movie: MovieInfo;
-  widthWindow: number;
 }
 
-const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie, widthWindow }) => {
-  const [sizeBtn, setSizeBtn] = useState<SizeType>("l");
+const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) => {
   const { t } = useTranslation();
+  const { width } = useMaineTemplateContext();
+  const [sizeBtn, setSizeBtn] = useState<SizeType>("l");
 
   useEffect(() => {
-    setSizeBtn(getSizeBtn(widthWindow));
-  }, [widthWindow]);
+    setSizeBtn(getSizeBtn(width));
+  }, [width]);
 
   return (
     <div className={clsx(Styles.trailerSection, pageType === "movie" && Styles.trailerSectionMovie)}>
       {pageType === "movie" && (
         <button className={Styles.backward}>
-          <a href={"http://localhost:3000"}>
+          <a href={"/"}>
             <LeftArrow />
             {"Назад"}
           </a>
@@ -59,7 +61,7 @@ const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie, wi
             variant={"primary"}
             size={sizeBtn}
             isWide={true}
-            link={movie.link}
+            link={new URL(`/${movie.link}`, domain)}
           />
 
           <div className={Styles.softkeyGroup}>

@@ -44,7 +44,7 @@ const Footer: FC = () => {
         <div className={Styles.bottomFooter}>
           <div className={Styles.aboutForm}>
             <div className={Styles.about}>{"2023, ООО «ТВОЁ ЛАЙВ» 18+\n ИНН  7720904034 "}</div>
-            <a href={"http://localhost:3000"} className={Styles.logo}>
+            <a href={"/"} className={Styles.logo}>
               <Logo />
             </a>
             <div className={Styles.btn}></div>

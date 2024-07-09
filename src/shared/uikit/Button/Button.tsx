@@ -10,7 +10,7 @@ interface ButtonProps {
   variant: ButtonVariantType;
   size: SizeType;
   isWide?: boolean;
-  link?: string;
+  link?: URL;
 }
 
 const Button: FC<ButtonProps> = ({ value, variant, size, isWide, link }) => {
@@ -25,7 +25,7 @@ const Button: FC<ButtonProps> = ({ value, variant, size, isWide, link }) => {
         isWide && Styles.wide
       )}
     >
-      <a href={link || "http://localhost:3000"}>{value}</a>
+      {typeof link !== "undefined" ? <a href={link.href}>{value}</a> : value}
     </button>
   );
 };

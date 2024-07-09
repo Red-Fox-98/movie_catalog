@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import Styles from "./TrailerSection.module.scss";
 import { MovieInfo } from "src/shared/api/types";
 import { hideSwiper } from "./helpers";
@@ -8,9 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { clsx } from "clsx";
 import { widthMobile } from "@styles/values";
-
-/*icons*/
 import TrailerSectionMovie from "src/features/trailerSectionMovie/TrailerSectionMovie";
+import { useMaineTemplateContext } from "src/widgets/template/MainTemplate/MainTemplate";
 
 export type TrailerSectionType = "home" | "movie";
 
@@ -20,24 +19,23 @@ interface TrailerSectionProps {
 }
 
 const TrailerSection: FC<TrailerSectionProps> = ({ pageType, moviesInfo }) => {
-  const [widthWindow, setWidthWindow] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
+  const { width } = useMaineTemplateContext();
 
   useEffect(() => {
-    setWidthWindow(Number(window.innerWidth));
-    hideSwiper(widthWindow, pageType);
-  }, [widthWindow, pageType]);
+    hideSwiper(width, pageType);
+  }, [width, pageType]);
 
   return (
     <Swiper
       spaceBetween={30}
       pagination={{ clickable: true }}
-      allowTouchMove={widthWindow <= widthMobile && pageType === "home"}
+      allowTouchMove={width <= widthMobile && pageType === "home"}
       modules={[Pagination]}
       className={clsx(Styles.content, pageType === "movie" && Styles.contentMovie)}
     >
       {moviesInfo.map((movieInfo) => (
         <SwiperSlide key={movieInfo.id}>
-          <TrailerSectionMovie pageType={pageType} movie={movieInfo} widthWindow={widthWindow} />
+          <TrailerSectionMovie pageType={pageType} movie={movieInfo} />
         </SwiperSlide>
       ))}
     </Swiper>

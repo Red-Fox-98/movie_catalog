@@ -6,4 +6,5 @@ export const hideSwiper = (width: number, currentTrailerSectionType: TrailerSect
 
   if (currentTrailerSectionType !== "home") swiperPagination.style.display = "none";
   else if (width > widthMobile) swiperPagination.style.display = "none";
+  else swiperPagination.style.display = "block";
 };

@@ -9,7 +9,7 @@ import Bell from "src/shared/uikit/icons/Bell";
 const Header: FC = () => {
   return (
     <div className={Styles.header}>
-      <a href={"http://localhost:3000"} className={Styles.logo}>
+      <a href={"/"} className={Styles.logo}>
         <Logo />
       </a>
 
