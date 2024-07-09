@@ -11,12 +11,12 @@ import { useTranslation } from "react-i18next";
 import { getSizeBtn } from "./helpers";
 import Button, { SizeType } from "src/shared/uikit/Button/Button";
 import { domain } from "@styles/values";
+import { useMaineTemplateContext } from "src/widgets/template/MainTemplate/MainTemplate";
 
 /*icons*/
 import Marker from "src/shared/uikit/icons/Marker";
 import Heart from "src/shared/uikit/icons/Heart";
 import Share from "src/shared/uikit/icons/Share";
-import { useMaineTemplateContext } from "src/widgets/template/MainTemplate/MainTemplate";
 
 interface TrailerSectionMovieProps {
   pageType: TrailerSectionType;
