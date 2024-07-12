@@ -1,51 +1,9 @@
-.attention {
-  position: relative;
-  width: 48px;
-  height: 48px;
-
-  .attention1 {
-    position: absolute;
-    left: 50%;
-    top: 21px;
-    transform: translateX(-50%);
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .attention2 {
-    position: absolute;
-    left: 50%;
-    top: 9px;
-    transform: translateX(-50%);
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (max-width: 375px) {
   .attention {
-    width: 20px;
-    height: 20px;
-
-    .attention1 {
-      height: 2.5px;
-      width: 2.5px;
-      top: 0;
-    }
-
-    .attention2 {
-      height: 8px;
-      width: 2.5px;
-      top: -3px;
+    margin-left: 16px;
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }

@@ -2,9 +2,9 @@ import { FC } from "react";
 
 const RightArrow: FC = () => {
   return (
-    <svg viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
-        d='M1.94271 16.1093L9.55204 8.49996L1.94271 0.890625L0.057373 2.77596L5.78137 8.49996L0.057373 14.224L1.94271 16.1093Z'
+        d='M8.08922 14.7558L12.8451 9.99997L8.08922 5.24414L6.91089 6.42247L10.4884 9.99997L6.91089 13.5775L8.08922 14.7558Z'
         fill='white'
       />
     </svg>

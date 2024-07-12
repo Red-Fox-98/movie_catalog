@@ -10,7 +10,7 @@
   text-align: left;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .status {
     width: auto;
     height: 26px;

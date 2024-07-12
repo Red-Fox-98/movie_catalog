@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Styles from "./Header.module.scss";
 import Logo from "../../../shared/uikit/icons/Logo";
-import Name from "../../../shared/uikit/icons/Name";
 import Search from "../../../shared/uikit/icons/Search";
 import Button from "../../../shared/uikit/Button/Button";
 import Auth from "src/shared/uikit/icons/Auth";
@@ -10,10 +9,9 @@ import Bell from "src/shared/uikit/icons/Bell";
 const Header: FC = () => {
   return (
     <div className={Styles.header}>
-      <div className={Styles.logo}>
+      <a href={"/"} className={Styles.logo}>
         <Logo />
-        <Name />
-      </div>
+      </a>
 
       <div className={Styles.headerRight}>
         <div className={Styles.searchForm}>

@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .tabBarTablet {
     max-width: 343px;
     max-height: 56px;

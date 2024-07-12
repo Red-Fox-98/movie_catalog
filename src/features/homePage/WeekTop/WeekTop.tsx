@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { MovieWeek } from "src/shared/api/home/types";
+import { MovieWeek } from "src/shared/api/types";
 import Image from "next/image";
 import Styles from "./WeekTop.module.scss";
 import { clsx } from "clsx";
@@ -19,9 +19,9 @@ const WeekTop: FC<WeekTopProps> = ({ movies }) => {
     <div className={Styles.moviesWeek}>
       <div className={clsx(drukWideCy.variable, Styles.title)}>Топ недели</div>
       <Swiper watchSlidesProgress={true} slidesPerView={3} className={Styles.movies}>
-        {movies.map((movie) => (
+        {movies.map((movie, index) => (
           <SwiperSlide key={movie.id} className={Styles.movie}>
-            <div className={Styles.number}>{numbers[movie.id].number} </div>
+            <div className={Styles.number}>{numbers[index].number} </div>
             <div className={Styles.previewMovie}>
               <Image src={movie.preview} alt={"preview"} width={246} height={370} priority />
             </div>

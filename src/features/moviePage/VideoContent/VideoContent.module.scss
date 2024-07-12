@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .content {
     width: 500px;
   }

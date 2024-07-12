@@ -1,17 +1,10 @@
-import { SizeType } from "src/shared/uikit/Button/Button";
-import { NextRouter } from "next/router";
+import { TrailerSectionType } from "src/widgets/trailerSection/TrailerSection";
+import { widthMobile } from "@styles/values";
 
-export const getSizeBtn = (width: number): SizeType => {
-  return width <= 375 ? "m" : "l";
-};
+export const hideSwiper = (width: number, currentTrailerSectionType: TrailerSectionType) => {
+  const swiperPagination = document.querySelector(".swiper-pagination") as HTMLElement;
 
-export const getWidthWindow = () => {
-  return typeof window !== "undefined" && window.innerWidth;
-};
-
-export const hideSwiper = (width: number, currentLink: NextRouter) => {
-  const swiperPagination = document.querySelector(".swiper-pagination");
-
-  if (currentLink.pathname !== "/") swiperPagination["style"] = "display:none";
-  else if (width > 375) swiperPagination["style"] = "display:none";
+  if (currentTrailerSectionType !== "home") swiperPagination.style.display = "none";
+  else if (width > widthMobile) swiperPagination.style.display = "none";
+  else swiperPagination.style.display = "block";
 };

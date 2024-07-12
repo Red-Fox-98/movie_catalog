@@ -1,3 +1,12 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+  }
+}
+
 .primary {
   border: none;
   cursor: pointer;

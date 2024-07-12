@@ -1,18 +1,8 @@
 export const dateCreation = (year: number, month: number, day: number) => {
-  const months = [
-    "января",
-    "февраля",
-    "марта",
-    "апреля",
-    "мая",
-    "июня",
-    "июля",
-    "августа",
-    "сентября",
-    "октября",
-    "ноября",
-    "декабря"
-  ];
-
-  return `${day} ${months[month - 1]} ${year}`;
+  const date = new Date(year, month - 1, day).toLocaleDateString("ru", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+  return date.slice(0, -3);
 };

@@ -20,7 +20,12 @@
     },
     "movieTitle": {
       "trailer": "Трейлер",
-      "season": "сезон"
+      "season": "сезон",
+      "series": "серия"
+    },
+    "movieStatus": {
+      "reviewed": "Посмотрено",
+      "notViewed": "Не посмотрено"
     }
   }
 }

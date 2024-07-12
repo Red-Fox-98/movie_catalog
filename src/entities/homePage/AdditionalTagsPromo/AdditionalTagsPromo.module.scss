@@ -24,7 +24,7 @@
   gap: 12px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: $mobile-width) {
   .catalog_additional_tags_grid {
     width: 303px;
     height: auto;
