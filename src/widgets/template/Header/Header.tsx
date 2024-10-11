@@ -5,11 +5,13 @@ import Search from "../../../shared/uikit/icons/Search";
 import Button from "../../../shared/uikit/Button/Button";
 import Auth from "src/shared/uikit/icons/Auth";
 import Bell from "src/shared/uikit/icons/Bell";
+import {useRouter} from "next/router";
 
 const Header: FC = () => {
+  const router = useRouter().asPath;
   return (
     <div className={Styles.header}>
-      <a href={"/"} className={Styles.logo}>
+      <a href={(router).slice(0, -(router.length - 1))} className={Styles.logo}>
         <Logo />
       </a>
 

@@ -1,9 +1,31 @@
 {
   "lang": "en",
+  "movieCatalog": {
+    "pageType": {
+      "home": "Read More",
+      "movie": "View"
+    }
+  },
   "homePage": {
     "movieStatus": {
       "premiere": "Premiere",
       "newSeason": "New season"
+    }
+  },
+  "moviePage": {
+    "informationTitle": {
+      "description": "Description",
+      "filmCrew": "Film crew",
+      "information": "Information"
+    },
+    "movieTitle": {
+      "trailer": "Trailer",
+      "season": "season",
+      "series": "series"
+    },
+    "movieStatus": {
+      "reviewed": "Viewed",
+      "notViewed": "Not Viewed"
     }
   }
 }
