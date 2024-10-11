@@ -12,6 +12,7 @@ import { getSizeBtn } from "./helpers";
 import Button, { SizeType } from "src/shared/uikit/Button/Button";
 import { domain } from "@styles/values";
 import { useMaineTemplateContext } from "src/widgets/template/MainTemplate/MainTemplate";
+import {useRouter} from "next/router";
 
 /*icons*/
 import Marker from "src/shared/uikit/icons/Marker";
@@ -24,6 +25,7 @@ interface TrailerSectionMovieProps {
 }
 
 const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) => {
+  const router = useRouter();
   const { t } = useTranslation();
   const { width } = useMaineTemplateContext();
   const [sizeBtn, setSizeBtn] = useState<SizeType>("l");
@@ -36,14 +38,14 @@ const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) 
     <div className={clsx(Styles.trailerSection, pageType === "movie" && Styles.trailerSectionMovie)}>
       {pageType === "movie" && (
         <button className={Styles.backward}>
-          <a href={"/"}>
+          <a href={`${router.basePath}/`}>
             <LeftArrow />
             {"Назад"}
           </a>
         </button>
       )}
 
-      <Link href={`/${movie.link}`}>
+      <Link href={`${router.basePath}/${movie.link}`}>
         <div className={clsx(Styles.preview, pageType === "home" ? Styles.preview : Styles.previewMovie)}>
           <Image src={movie.preview} alt={"preview"} width={1231} height={692} priority />
         </div>
@@ -61,7 +63,7 @@ const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) 
             variant={"primary"}
             size={sizeBtn}
             isWide={true}
-            link={new URL(`/${movie.link}`, domain)}
+            link={new URL(`${router.basePath}/${movie.link}`, domain)}
           />
 
           <div className={Styles.softkeyGroup}>

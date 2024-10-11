@@ -13,16 +13,16 @@ import Mine from "../../../shared/uikit/icons/Mine";
 
 const TabSwitch: FC = () => {
   const [currentSection, setSection] = useState(new URL(domain));
-  const currentLink = useRouter();
+  const router = useRouter();
 
   const changingActivityStatus = (link: URL) => {
-    if (link.pathname === currentLink.pathname) {
+    if (link.pathname === router.pathname) {
       setSection(new URL(link));
     }
   };
 
   const checkStatus = (link: URL) => {
-    return link.pathname === currentLink.pathname;
+    return link.pathname === router.pathname;
   };
 
   return (

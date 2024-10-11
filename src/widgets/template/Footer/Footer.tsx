@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 import SocialButton from "src/features/template/SocialButton/SocialButton";
 
 const Footer: FC = () => {
-  const currentLink = useRouter();
+  const router = useRouter();
   return (
     <div className={Styles.content}>
       <div className={Styles.footer}>
@@ -44,7 +44,7 @@ const Footer: FC = () => {
         <div className={Styles.bottomFooter}>
           <div className={Styles.aboutForm}>
             <div className={Styles.about}>{"2023, ООО «ТВОЁ ЛАЙВ» 18+\n ИНН  7720904034 "}</div>
-            <a href={"/"} className={Styles.logo}>
+            <a href={`${router.basePath}/`} className={Styles.logo}>
               <Logo />
             </a>
             <div className={Styles.btn}></div>
@@ -52,7 +52,7 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      {currentLink.pathname === "/" && (
+      {router.pathname === "/" && (
         <div className={Styles.probeBtn}>
           <Button value={"Попробовать бесплатно"} variant={"primary"} size={"m"} />
         </div>
