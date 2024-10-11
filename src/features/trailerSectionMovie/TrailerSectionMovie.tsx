@@ -45,7 +45,7 @@ const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) 
         </button>
       )}
 
-      <Link href={`${router.basePath}/${movie.link}`}>
+      <Link href={`/${movie.link}`}>
         <div className={clsx(Styles.preview, pageType === "home" ? Styles.preview : Styles.previewMovie)}>
           <Image src={movie.preview} alt={"preview"} width={1231} height={692} priority />
         </div>
@@ -63,7 +63,7 @@ const TrailerSectionMovie: FC<TrailerSectionMovieProps> = ({ pageType, movie }) 
             variant={"primary"}
             size={sizeBtn}
             isWide={true}
-            link={new URL(`${router.basePath}/${movie.link}`, domain)}
+            link={new URL(`/${movie.link}`, domain)}
           />
 
           <div className={Styles.softkeyGroup}>

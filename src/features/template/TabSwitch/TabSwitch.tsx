@@ -29,11 +29,11 @@ const TabSwitch: FC = () => {
     <div className={Styles.tabBarTabletForm}>
       <div className={Styles.tabBarTablet}>
         <TabButton
-          link={new URL("/", domain)}
+          link={new URL(`${router.basePath}/`, domain)}
           name={"Главная"}
           icon={<Main />}
           onClick={() => changingActivityStatus}
-          isActive={checkStatus(new URL("/", domain))}
+          isActive={checkStatus(new URL(`${router.basePath}/`, domain))}
         />
         <TabButton
           link={currentSection}
