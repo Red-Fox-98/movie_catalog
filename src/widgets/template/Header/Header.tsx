@@ -8,10 +8,10 @@ import Bell from "src/shared/uikit/icons/Bell";
 import {useRouter} from "next/router";
 
 const Header: FC = () => {
-  const router = useRouter().asPath;
+  const router = useRouter();
   return (
     <div className={Styles.header}>
-      <a href={(router).slice(0, -(router.length - 1))} className={Styles.logo}>
+      <a href={`${router.basePath}/`} className={Styles.logo}>
         <Logo />
       </a>
 
