@@ -12,12 +12,12 @@ import TV from "../../../shared/uikit/icons/TV";
 import Mine from "../../../shared/uikit/icons/Mine";
 
 const TabSwitch: FC = () => {
-  const [currentSection, setSection] = useState(new URL(domain));
   const router = useRouter();
+  const [currentSection, setSection] = useState(new URL(`${router.basePath}/`, domain));
 
   const changingActivityStatus = (link: URL) => {
     if (link.pathname === router.pathname) {
-      setSection(new URL(link));
+      setSection(link);
     }
   };
 
